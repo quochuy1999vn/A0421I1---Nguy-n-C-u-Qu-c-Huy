@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính bỏ túi</title>
+</head>
+<body>
+<style>
+    body {
+        padding: 200px 0px 0px 200px;
+    }
+
+    .button {
+        margin: 15px 0px 0px 0px;
+        width: 40px;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+        background-color: white;
+        color: blue;
+        border: 1px solid darkgray;
+    }
+     table {
+         border: 2px solid black;
+         text-align: center;
+     }
+</style>
+<div>
+    <table>
+        <tr><td colspan="4"><input type="text" id="result" size="35" height="100"></td></tr>
+    <br>
+            <tr>
+                <td><button class="button" type="button" onclick="input('1')">1</button></td>
+                <td><button class="button" type="button" onclick="input('2')">2</button></td>
+                <td><button class="button" type="button" onclick="input('3')">3</button></td>
+                <td><button class="button" type="button" onclick="input('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" type="button" onclick="input('4')">4</button></td>
+                <td><button class="button" type="button" onclick="input('5')">5</button></td>
+                <td><button class="button" type="button" onclick="input('6')">6</button></td>
+                <td><button class="button" type="button" onclick="input('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" type="button" onclick="input('7')">7</button></td>
+                <td><button class="button" type="button" onclick="input('8')">8</button></td>
+                <td><button class="button" type="button" onclick="input('9')">9</button></td>
+                <td><button class="button" type="button" onclick="input('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" type="button" onclick="input('C')">C</button></td>
+                <td><button class="button" type="button" onclick="input('0')">0</button></td>
+                <td><button class="button" type="button" onclick="calculate()">=</button></td>
+                <td><button class="button" type="button" onclick="input('/')">/</button></td>
+            </tr>
+    </table>
+</div>
+
+<script>
+    function input(number) {
+        document.getElementById('result').value += number;
+        if (number === 'C') {
+            document.getElementById('result').value = '';
+        }
+    }
+
+    function calculate() {
+        document.getElementById('result').value = (eval(document.getElementById('result').value));
+    }
+</script>
+</body>
+</html>

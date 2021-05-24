@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+  <script>
+    // // bài 1:
+    // var a = parseInt(prompt('Nhập a: '));
+    // var b = parseInt(prompt('Nhập b: '));
+    // if (a % b == 0) {
+    //   alert('true');
+    // }else {
+    //   alert('false');
+    // }
+    //
+    // // bài 2
+    // var tuoi = parseInt(prompt('Nhập Tuổi: '));
+    // if(tuoi >= 15) {
+    //   alert('Đủ điều kiện vào lớp 10');
+    // }else {
+    //   alert('Không đủ điều kiện vào lớp 10');
+    // }
+
+    //bài 3
+    // var soNguyen = parseInt(prompt('Nhập số nguyên bất kỳ'));
+    // if(soNguyen > 0) {
+    //   alert(soNguyen + ' > ' + 0);
+    // }else if(soNguyen == 0){
+    //   alert(soNguyen + ' = ' + 0)
+    // }else {
+    //   alert(soNguyen + ' < ' + 0);
+    // }
+    //
+    // //bài 4
+    // var soNguyen1 = parseInt(prompt('Nhập số nguyên thứ 1: '));
+    // var soNguyen2 = parseInt(prompt('Nhập số nguyên thứ 2: '));
+    // var soNguyen3 = parseInt(prompt('Nhập số nguyên thứ 3: '));
+    // if(soNguyen1 > soNguyen2){
+    //   if(soNguyen1 > soNguyen3) {
+    //     alert(soNguyen1 + 'Lớn nhất');
+    //   }else {
+    //       alert(soNguyen3 + 'Lớn nhất');
+    //   }
+    // }else if(soNguyen2 > soNguyen3) {
+    //     alert(soNguyen2 + 'Lớn nhất');
+    // }else {
+    //     alert(soNguyen3 + 'Lớn nhất');
+    // }
+
+    // bài 5
+    // var diemKT = parseInt(prompt('Nhập điểm kiểm tra'));
+    // var diemThi = parseInt(prompt('Nhập điểm thi'));
+    // var diemCuoiky = parseInt(prompt('Nhập điểm cuối kỳ'));
+    // var diemTongket = (diemKT + diemThi + diemCuoiky) / 3;
+    // if(diemKT <= 10 && diemThi <= 10 && diemCuoiky <= 10) {
+    //     if(diemTongket >= 8) {
+    //         alert(diemTongket + ' Học sinh giỏi');
+    //     }else if(diemTongket >= 6.5) {
+    //         alert(diemTongket + 'Học sinh khá');
+    //     }else if(diemTongket >= 4.5) {
+    //         alert(diemTongket + 'Học sinh trung binh');
+    //     }else {
+    //         alert(diemTongket + 'Học sinh yếu');
+    //     }
+    // }else {
+    //     alert('Nhập sai số!')
+    // }
+    //
+    // // bài 6
+    // var doanhSo = parseInt(prompt('Nhập doanh số'));
+    // var hoaHong = doanhSo * 10/100;
+    // alert('Hoa hồng nhận được là: ' + hoaHong);
+
+    //bài 7
+    var soPhut = parseInt(prompt('Nhập số phút: '));
+    var result
+    var phi = 0;
+    const phiCoDinh = 25;
+    if (soPhut > 200) {
+        phi = (soPhut - 200)*200+150*400+50*600;
+    }else if(soPhut > 50){
+        soPhut = (soPhut-50)*400+50*600;
+    }else {
+        phi=soPhut*600;
+    }
+    result = 0.01*phi+phiCoDinh;
+    alert('Bạn đã gọi ' + soPhut + ' phut.');
+    alert('Số tiền bạn phải trả là: ' + result + ' VND')
+  </script>
+</body>
+</html>
