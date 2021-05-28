@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var f1 = 1, f2 = 1;
+        document.write(f1 + '<br/>');
+        while (f2 <= 10) {
+            document.write(f2 + '<br/>');
+            let temp  = f1 + f2;
+            f1 = f2;
+            f2 = temp;
+        }
+    </script>
+</body>
+</html>

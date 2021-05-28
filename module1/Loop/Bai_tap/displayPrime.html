@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let num = 2;
+        let count = 0;
+        while (count < 5) {
+            let temp = true;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if(num % i == 0) {
+                    temp = false;
+                    break;
+                }
+            }
+            if (temp) {
+                alert(num + ' là số nguyên tố');
+                count++;
+            }
+            num++;
+        }
+    </script>
+</body>
+</html>

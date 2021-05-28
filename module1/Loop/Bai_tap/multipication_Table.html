@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng Cửu Chương</title>
+</head>
+<body>
+    <script>
+        let temp = "<table width='100%' border='1'>"
+        for (var i = 2; i <= 9; i++ ) {
+            temp += "<tr>"
+            for (var j = 1; j <= 10; j ++) {
+                var result = i * j;
+                temp += '<td>' + i + 'x' + j + ' = ' + result + '</td>';
+            }
+            temp += "</tr>";
+        }
+        temp += "</table>";
+        document.write(temp);
+    </script>
+</body>
+</html>
