@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+  var arr = [];
+  var num;
+
+  do {
+    num = parseInt(prompt("Enter length of array: "));
+  }while (num < 0 || isNaN(num));
+
+  for (let i = 0; i < num; i++) {
+    arr[i] = parseInt(prompt("Enter element of array: "));
+  }
+  for (let i = 0; i < num; i++) {
+    document.write(arr[i] + " ");
+  }
+  document.write("</br>");
+  findX();
+
+  function findX() {
+    let count = 0;
+    let x = parseInt(prompt("Enter number want find: "));
+    let iscontainX = false;
+    for (let i = 0; i < num; i++) {
+      if (arr[i] == x) {
+        iscontainX = true;
+        count++;
+      }
+    }
+    if (iscontainX) {
+      document.write("Số lần xuất hiện của x là: " + count);
+    }else {
+      document.write("-1");
+    }
+  }
+
+</script>
+</body>
+</html>

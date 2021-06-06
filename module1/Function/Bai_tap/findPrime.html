@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+<script>
+    alert(isPrime(1));
+    function isPrime(number) {
+        if (number < 2) {
+            return "Số này không phải là số nguyên tố";
+        }
+        for (i = 2; i <= Math.sqrt(number); i++) {
+            if (number%i == 0) {
+                return "Số này không phải là số nguyên tố";
+            }
+        }
+        return "Số này là số nguyên tố";
+    }
+</script>
+</body>
+</html>

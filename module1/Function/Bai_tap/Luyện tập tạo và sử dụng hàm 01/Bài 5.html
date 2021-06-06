@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<input type="text" id="inputStar"><button onclick="findConstellation()">Search</button>
+<script>
+  var star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+  var constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+  function findConstellation() {
+    let inputStar = document.getElementById("inputStar").value;
+    for (let i =0; i < star.length; i++) {
+      if (inputStar === star[i]) {
+        alert(constellation[i]);
+        break;
+      }
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+  var a = prompt("Enter a: ");
+  var b = prompt("Enter b: ");
+  document.write(a + " " + b);
+  document.write("</br>")
+  swap();
+
+  function swap() {
+    let temp = a;
+    a = b;
+    b = temp;
+    document.write("Number has swap: "   + a + " " + b);
+  }
+</script>
+</body>
+</html>

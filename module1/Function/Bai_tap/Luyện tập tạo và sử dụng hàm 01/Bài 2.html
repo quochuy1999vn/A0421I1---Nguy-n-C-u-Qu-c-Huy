@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="text" id="number">
+<button onclick="changeValue()">Change Value</button>
+<p id="result"></p>
+<script>
+    var result;
+    function changeValue(number) {
+        number = parseInt(document.getElementById('number').value);
+        result = ++number;
+        document.getElementById('result').innerHTML = result;
+    }
+
+</script>
+</body>
+</html>

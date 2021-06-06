@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+  var a = parseInt(prompt("Enter a: "));
+  var b = parseInt(prompt("Enter b: "));
+  var c = parseInt(prompt("Enter c: "));
+  min();
+
+  function min() {
+    if (a < b) {
+      if (a < c) {
+        alert(a);
+      }else{
+          alert(c);
+      }
+    }else if (b < c) {
+        alert(b);
+    }else {
+        alert(c);
+    }
+  }
+</script>
+</body>
+</html>
