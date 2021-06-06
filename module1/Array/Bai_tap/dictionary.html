@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <script>
+        let input = window.prompt('Nhập từ mà bạn muốn dịch');
+        var English = ['Hello', 'Bye', 'Good morning'];
+        var tiengViet =['Xin chào', 'Tạm biệt', 'Chào buổi sáng'];
+        var result = [];
+
+        // for (i = 0; i < input.length; i++) {
+        //     if (input === English[0]) {
+        //         alert(tiengViet[0]);
+        //         break;
+        //     }else if (input === English[1]) {
+        //         alert(tiengViet[1]);
+        //         break;
+        //     }else if (input === English[2]){
+        //         alert(tiengViet[2]);
+        //         break;
+        //     }
+        // }
+
+            for (i =0; i < English.length; i++) {
+                if (input === English[i]) {
+                    alert(tiengViet[i]);
+                    break;
+                }
+
+            }
+
+    </script>
+</body>
+</html>

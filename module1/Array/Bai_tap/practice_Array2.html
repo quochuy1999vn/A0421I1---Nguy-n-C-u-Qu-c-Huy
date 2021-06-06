@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2</title>
+</head>
+<body>
+<script>
+    // bài 1
+    // let a = [
+    //     [1, 2, 1, 24],
+    //     [8, 11, 9, 4],
+    //     [7, 0, 7, 27],
+    //     [7, 4, 28, 14],
+    //     [3, 10, 26, 7]
+    // ];
+    //
+    // for (var i in a) {
+    //     document.write("row " + i + "</br>");
+    //     for (var j in a[i]) {
+    //         document.write(" " + a[i][j] + "</br>");
+    //     }
+    // }
+
+    // bài 2
+    // var arr = [];
+    // var num;
+    //
+    // // hàm nhập độ dài của mảng
+    // do {
+    //     num = parseInt(prompt("Enter length of array: "));
+    // }while (num <= 0 || isNaN(num));
+    //
+    // // Nhập mảng
+    // for (i = 0; i < num; i++) {
+    //     arr[i] = prompt("Enter element of array: ");
+    // }
+    //
+    // // xuất mảng
+    // document.write("Các phần tử trong mảng: " + "</br>");
+    // for (i = 0; i < num; i++) {
+    //     document.write(arr[i] + " ");
+    // }
+    //
+    // // đảo mảng
+    // let reverseArray = '';
+    // document.write("</br>   " + "Các phần tử đảo trong mảng: " + "</br>");
+    // for (i = num - 1; i >= 0; i--) {
+    //     reverseArray += arr[i] + " ";
+    // }
+    // document.write(reverseArray);
+
+    // bài 3
+    var arr = [];
+    var num;
+    var count =0;
+
+    // hàm nhập độ dài của mảng
+    do {
+        num = parseInt(prompt("Enter length of array: "));
+    }while (num <= 0 || isNaN(num));
+
+    // Nhập mảng
+    for (let i = 0; i < num; i++) {
+        arr[i] = prompt("Enter element of array: ");
+    }
+
+    // xuất mảng
+    document.write("Các phần tử trong mảng: " + "</br>");
+    for (let i = 0; i < num; i++) {
+        if (arr[i] != 'a' && arr[i] != 'Z') {
+            count++;
+        }else {
+            continue;
+        }
+        document.write(arr[i]);
+    }
+    document.write("ádadsd"+count);
+
+    // bài 4
+    // var str = [];
+    // var num;
+    //
+    // // hàm nhập độ dài của mảng
+    // do {
+    //     num = parseInt(prompt("Enter length of array: "));
+    // }while (num <= 0 || isNaN(num));
+    //
+    // // Nhập mảng
+    // for (i = 0; i < num; i++) {
+    //     str[i] = prompt("Enter element of array: ");
+    // }
+    //
+    // // xuất mảng
+    // document.write("Các phần tử trong mảng: " + "</br>");
+    // for (i = 0; i < num; i++) {
+    //     document.write(str[i] + " ");
+    //     document.write(str[i].join(""));
+    // }
+
+    // bài 5
+    // var str1 = [];
+    // var str2 = [];
+    // var num;
+    //
+    // // hàm nhập độ dài của mảng
+    // do {
+    //     num = parseInt(prompt("Enter length of array: "));
+    // }while (num <= 0 || isNaN(num));
+    //
+    // // Nhập mảng 1
+    // for (i = 0; i < num; i++) {
+    //     str1[i] = prompt("Enter element of array 1: ");
+    // }
+    // // Nhập mảng 2
+    // for (let j = 0; j < num; j++) {
+    //     str2[j] = prompt("Enter element of array 2: ");
+    // }
+    // var same = true;
+    // // xuất mảng 1
+    // document.write("Các phần tử trong mảng 1: " + "</br>");
+    // for (let i = 0; i < num; i++) {
+    //     document.write(str1[i] + " ");
+    // }
+    // // xuất mảng 2
+    // document.write("</br>" + "Các phần tử trong mảng 2: " + "</br>");
+    // for (let j = 0; j < num; j++) {
+    //     document.write(str2[j] + " ");
+    // }
+    //
+    // for (let i = 0; i < num; i++) {
+    //         if (str1[i] != str2[i]) {
+    //             same = false;
+    //             break;
+    //         }
+    // }
+    //
+    // if (same) {
+    //     document.write("</br>" + "Array 1 same array 2:");
+    // }else {
+    //     document.write("</br>" + "Array 1 not same array 2:");
+    // }
+</script>
+</body>
+</html>

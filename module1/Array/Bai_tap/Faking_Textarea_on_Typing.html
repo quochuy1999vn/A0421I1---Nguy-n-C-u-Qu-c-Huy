@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body onload="troll()" style="text-align: center">
+<h2>Type anthing slowly</h2>
+<form>
+    <label>
+        <textarea cols="30" rows="5" id="txt"></textarea>
+    </label>
+</form>
+<script>
+    let array = [];
+    let str = "";
+    array[1] = 'T';
+    array[2] = 'ô';
+    array[3] = 'I';
+    array[4] = ' ';
+    array[5] = 'L';
+    array[6] = 'À';
+    array[7] = ' ';
+    array[8] = 'M';
+    array[9] = 'Ộ';
+    array[10] = 'T';
+    array[11] = ' ';
+    array[12] = 'Đ';
+    array[13] = 'Ứ';
+    array[14] = 'A';
+    array[15] = ' ';
+    array[16] = 'N';
+    array[17] = 'G';
+    array[18] = 'Ố';
+    array[19] = 'C';
+    array[20] = '!';
+    array[21] = '!';
+    array[22] = ' ';
+
+    function troll() {
+        let text = document.getElementById('txt').value;
+            for (i = 1; i <= text.length; i++) {
+                str = str + array[i];
+                if (i === 22) {
+                    str = "";
+                }
+            }
+        document.getElementById('txt').value = str;
+        str = "";
+        setTimeout('troll()', 1);
+    }
+</script>
+</body>
+</html>

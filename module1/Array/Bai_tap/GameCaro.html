@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Caro</title>
+</head>
+<body>
+<h3>Game Caro</h3>
+<p id="carogame"/>
+<button onclick="changValue1()">Player1</button>
+<button onclick="changValue2()">Player2</button>
+
+<script>
+    let b = document.getElementById('carogame');
+
+    let broad = [];
+    let data = '';
+    for (i = 0; i < 3; i++) {
+        broad[i] = new Array(' . ', ' . ', ' . ',);
+    }
+
+    for (i = 0; i < 3; i++) {
+        data += '</br>';
+        for (j = 0; j < 3; j++) {
+            data += broad[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+    data += "</br><br/><button onclick='changValue1()'>Player1</button>"
+    data += "</br><br/><button onclick='changValue2()'>Player2</button>"
+    b.innerHTML = data;
+
+    function changValue1() {
+        let positionX = prompt('X: ');
+        let positionY = prompt('Y: ');
+        data = "";
+        broad[positionX][positionY] = 'X';
+        for (i = 0; i < 3; i++) {
+            data += '</br>';
+            for (j = 0; j < 3; j++) {
+                data += broad[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "</br><br/><button onclick='changValue1()'>Player1</button>"
+        data += "</br><br/><button onclick='changValue2()'>Player2</button>"
+        b.innerHTML = data;
+        continute = true;
+    }
+
+    function changValue2() {
+        let positionX = prompt('X: ');
+        let positionY = prompt('Y: ');
+        data = "";
+        broad[positionX][positionY] = 'O';
+        for (i = 0; i < 3; i++) {
+            data += '</br>';
+            for (j = 0; j < 3; j++) {
+                data += broad[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "</br><br/><button onclick='changValue1()'>Player1</button>"
+        data += "</br><br/><button onclick='changValue2()'>Player2</button>"
+        b.innerHTML = data;
+    }
+
+
+</script>
+</body>
+</html>
