@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số đối xứng</title>
+</head>
+<body>
+<script>
+  var arr = [];
+  var num;
+  var check = 1;
+
+  do {
+    num = parseInt(prompt("Enter length of array: "));
+  }while (num < 0 || isNaN(num));
+
+  input();
+  output();
+  isPalindrome(arr);
+  function input() {
+    for (let i = 0; i < num; i++) {
+      arr[i] = parseInt(prompt("Enter element of array: "));
+    }
+  }
+  function output() {
+    for (let i = 0; i < num; i++) {
+      document.write(arr[i] + " ");
+    }
+  }
+
+  function isPalindrome(arr) {
+    for (let i = 0; i < num/2; i++) {
+      if (arr[i] != arr[num - i - 1]) {
+        check = 0;
+        break;
+      }
+    }
+    if (check == 0) {
+      document.write("Mảng nhập không phải là mảng đối xứng!");
+    }else {
+      document.write("Mảng nhập là mảng đối xứng!");
+    }
+  }
+</script>
+</body>
+</html>
