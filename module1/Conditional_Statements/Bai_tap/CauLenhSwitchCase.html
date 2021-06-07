@@ -29,7 +29,7 @@
                 document.getElementById('result').innerHTML = 'Tháng: ' + thang + ' có 30 ngày.';
                 break;
             case 2:
-                if (nam % 400 == 0) {
+                if ((nam % 400 === 0 &nam%100 !==0 && nam % 400 !==0)||(nam%100===0 && nam % 400===0)) {
                     document.getElementById('result').innerHTML = 'Tháng: ' + thang + ' có 29 ngày vì đó là năm nhuận';
                     break;
                 }

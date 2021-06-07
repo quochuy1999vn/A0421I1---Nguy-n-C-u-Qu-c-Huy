@@ -90,20 +90,20 @@
     // }
 
     // bài 9
-    // var a = parseInt(prompt('Nhập a: '));
-    // var b = parseInt(prompt('Nhập b: '));
-    // var c = parseInt(prompt('Nhập c: '));
-    // if(a,b,c > 0) {
-    //     if(a + b > c) {
-    //         if(b + c > a) {
-    //             if(a + c > b) {
-    //                 alert('là 1 hình tam giác');
-    //             }else {
-    //                 alert('Không phải là hình tam giác');
-    //             }
-    //         }
-    //     }
-    // }
+    var a = parseInt(prompt('Nhập a: '));
+    var b = parseInt(prompt('Nhập b: '));
+    var c = parseInt(prompt('Nhập c: '));
+    if(a > 0 && b > 0 && c > 0) {
+        if(a + b > c) {
+            if(b + c > a) {
+                if(a + c > b) {
+                    alert('là 1 hình tam giác');
+                }else {
+                    alert('Không phải là hình tam giác');
+                }
+            }
+        }
+    }
 
     // bài 10
     // var kWh = parseInt(prompt('Nhập số tiền điện đã sử dụng'));

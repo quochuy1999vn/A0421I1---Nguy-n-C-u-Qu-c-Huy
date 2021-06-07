@@ -7,9 +7,8 @@
 <body>
     <script>
         let input = window.prompt('Nhập từ mà bạn muốn dịch');
-        var English = ['Hello', 'Bye', 'Good morning'];
+        var tiengAnh = ['Hello', 'Bye', 'Good morning'];
         var tiengViet =['Xin chào', 'Tạm biệt', 'Chào buổi sáng'];
-        var result = [];
 
         // for (i = 0; i < input.length; i++) {
         //     if (input === English[0]) {
@@ -24,8 +23,8 @@
         //     }
         // }
 
-            for (i =0; i < English.length; i++) {
-                if (input === English[i]) {
+            for (let i =0; i < tiengAnh.length; i++) {
+                if (input === tiengAnh[i]) {
                     alert(tiengViet[i]);
                     break;
                 }
