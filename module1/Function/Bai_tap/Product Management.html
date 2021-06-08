@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<style>
+    .proDuct {
+        color: red;
+    }
+    button {
+        background-color: #5BC750;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<body>
+<script>
+
+    var arrProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi redmi Note 4", "Apple iphone 6S", " Xiaomi Mi 5S Plus", "Apple iphone 6 Plus", " Fujitsu F-04E", "Oppo A71"];
+    var count = 0;
+
+    function disPlayProduct() {
+        document.body.innerHTML = "";
+        document.write("<h3>Add New Product</h3>");
+        document.write('<table>')
+        document.write('<tr>')
+        document.write('<td align="center" bgcolor="#CDD1CD" width="300" height="50"><input size="30" type="text" id="inputNewProduct"/><button onclick="createProduct()">Add</button></td>');
+        document.write('</tr>')
+        document.write('</table>')
+        document.write('<h3>Display All Product</h3>')
+        document.write('</br><table class="table">');
+        document.write('<tr>');
+        document.write('<td width="30">STT</td>');
+        document.write('<td width="200">Product Name</td>');
+        document.write('<td width="100"></td>');
+        document.write('<td width="50"></td>');
+        document.write('<td class="proDuct">' + arrProduct.length + ' Product' + '</td>');
+        document.write('</table>')
+        document.write('<table >')
+        document.write('</tr>');
+        for (let i = 0; i < arrProduct.length; i++) {
+            document.write('<tr>')
+            document.write('<td width="30">' + (i+1) + '</td>');
+            document.write('<td width="200">' + arrProduct[i] + '</td>');
+            document.write('<td width="100">' + '<button id="editProduct" onclick="editProduct(' + i +')">Edit</button>' + '</td>');
+            document.write('<td width="100">' + '<button id="deleteProduct" onclick="deleteProduct(' + i +')">Delete</button>' + '</td>');
+            document.write('</tr>');
+            count++;
+        }
+        document.write('</table>')
+    }
+
+    function createProduct() {
+        let product = document.getElementById('inputNewProduct').value;
+        arrProduct.push(product);
+        disPlayProduct();
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Bạn có muốn xoá " + arrProduct[index] + " hay không? ")) {
+            arrProduct.splice(index, 1);
+            disPlayProduct();
+        }
+
+    }
+
+    function editProduct(index) {
+        document.body.innerHTML = "";
+        document.write('<input type="text" id="inputNewProduct"/><button onclick="createProduct()">Add</button>');
+        document.write('</br><table>');
+        for (let i = 0; i < arrProduct.length; i++) {
+            document.write('<tr>')
+            if (i == index) {
+                document.write('<td><input id="editValueProduct" value=""' + arrProduct[i] + '></td>');
+                document.write('<td>' + '<button onclick="successProduct(' + i +')">Update</button>' + '</td>');
+            }
+            document.write('<td>' + arrProduct[i] + '</td>');
+            document.write('<td>' + '<button id="editProduct" onclick="editProduct(' + i +')">Edit</button>' + '</td>');
+            document.write('<td>' + '<button id="deleteProduct" onclick="deleteProduct(' + i +')">Delete</button>' + '</td>');
+            document.write('</tr>');
+        }
+        document.write('</table>')
+    }
+
+    function successProduct(index) {
+        arrProduct[index] = document.getElementById('editValueProduct').value;
+        disPlayProduct();
+    }
+
+    disPlayProduct();
+</script>
+</body>
+</html>
