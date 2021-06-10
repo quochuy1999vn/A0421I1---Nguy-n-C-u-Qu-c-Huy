@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    var input = prompt("Enter number: ");
+
+    // hiển thị số nguyên tố
+    // function prime() {
+    //     if (checkPrime()) {
+    //         document.write(input + " is a prime number");
+    //     }else {
+    //         document.write(input + " is NOT a prime number");
+    //     }
+    //
+    // }
+    //
+    // // kiểm tra số nguyên tố
+    // function checkPrime() {
+    //     if (input < 2) {
+    //         return false;
+    //     }
+    //     for (let i = 2; i <= Math.sqrt(input); i++) {
+    //         if (input % i == 0) {
+    //             return false;
+    //         }
+    //     }
+    //     return true
+    // }
+
+
+
+    // kiểm tra số hoàn hảo
+    // function checkPerfectNumber() {
+    //     let sum = 0;
+    //     for (let i = 1; i <= input/2; i++) {
+    //         if (input % i == 0) {
+    //             sum += i;
+    //         }
+    //     }
+    //     if (sum == input) {
+    //         document.write(input + " is a perfect number");
+    //     }else {
+    //         document.write(input + " is NOT a perfect number");
+    //     }
+    // }
+
+    //kiểm tra phần tử có phải là số hay không?
+    function checkElement() {
+        if (input >= "A" && input <= "Z"){
+            document.write("Đây là ký tự dạng chuỗi, vui lòng nhập lại!")
+        }else {
+            document.write("Đây là ký tự số")
+        }
+    }
+
+    function displayElement() {
+        if (checkElement()) {
+            alert("Element is a number")
+        }
+    }
+    // gọi hàm
+    // checkPrime();
+    // prime();
+    // checkPerfectNumber();
+    displayElement();
+</script>
+</body>
+</html>

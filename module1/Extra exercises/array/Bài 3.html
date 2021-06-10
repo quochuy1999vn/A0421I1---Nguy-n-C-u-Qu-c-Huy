@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  var arr = [];
+  var num;
+
+  do {
+    num = parseInt(prompt("Enter length of array: "));
+  }while (num <= 0 && isNaN(num) );
+  for (let i = 0; i < num; i++) {
+    arr[i] = parseInt(prompt("Enter element " + (i+1)));
+     if () {
+      break;
+     }
+  }
+
+  function sum() {
+    let sum = 0;
+    for (let i = 0; i < num; i++) {
+      sum += arr[i]
+    }
+    document.write("Tổng các số trong mảng là: "+ sum)
+  }
+
+  //gọi hàm
+  sum();
+</script>
+</body>
+</html>

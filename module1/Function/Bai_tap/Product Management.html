@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
+    <style>
+        script {
+            display: block;
+        }
+        .proDuct {
+            color: red;
+        }
+        button {
+            background-color: #5BC750;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
-<style>
-    .proDuct {
-        color: red;
-    }
-    button {
-        background-color: #5BC750;
-        color: white;
-    }
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
-</style>
+
 <body>
 <script>
 
@@ -33,11 +37,11 @@
         document.write('<h3>Display All Product</h3>')
         document.write('</br><table class="table">');
         document.write('<tr>');
-        document.write('<td width="30">STT</td>');
-        document.write('<td width="200">Product Name</td>');
-        document.write('<td width="100"></td>');
-        document.write('<td width="50"></td>');
-        document.write('<td class="proDuct">' + arrProduct.length + ' Product' + '</td>');
+        document.write('<th width="30">STT</th>');
+        document.write('<th width="200">Product Name</th>');
+        document.write('<th width="100"></th>');
+        document.write('<th width="50"></th>');
+        document.write('<th class="proDuct">' + arrProduct.length + ' Product' + '</th>');
         document.write('</table>')
         document.write('<table >')
         document.write('</tr>');

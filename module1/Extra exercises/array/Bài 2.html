@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    var arr = [];
+    var num;
+
+    do {
+        num = parseInt(prompt("Enter length: "));
+    }while (num <= 0 || isNaN(num));
+
+    // nhập mảng
+    function input() {
+        for (let i = 0; i < num; i++) {
+            arr[i] = parseInt(prompt("Enter element : " + (i+1)));
+        }
+    }
+
+    // xuất mảng
+    function output() {
+        for (let i = 0; i < num; i++) {
+            document.write(arr[i] + " ");
+        }
+    }
+
+    // Tổng
+    function sum() {
+        let sum = 0;
+        for (let i = 0; i < num; i++) {
+            sum += arr[i];
+        }
+        document.write(sum);
+    }
+
+    // đếm số nguyên tố
+    // function checkPrime(arr) {
+    //     let count = 0;
+    //
+    //         if (arr < 2) {
+    //         for (let i = 2; i < Math.sqrt(arr); i++) {
+    //             if (arr % 2 == 0) {
+    //                 continue;
+    //             }
+    //         }
+    //         count++;
+    //     }
+    //
+    //     document.write("Số lần, số nguyên tố xuất hiện trong mảng" + count);
+    // }
+
+    // Kiểm tra mảng có số âm hay không
+    function checkNumber() {
+        let temp = false;
+
+        for (let i = 0; i < num; i++) {
+            if (arr[i] < 0) {
+                temp = true;
+            }
+        }
+
+        if (temp) {
+            document.write("true");
+        }else {
+            document.write("False");
+        }
+    }
+
+    function downLine() {
+        document.write("<br/>");
+    }
+
+    input();
+    document.write("Element of array: ");
+    output();
+    document.write("</br>");
+    document.write("Sum element of array: ");
+    sum();
+    // checkPrime();
+    downLine();
+    checkNumber();
+
+    // output();
+</script>
+</body>
+</html>
