@@ -6,13 +6,8 @@
 </head>
 <body>
 <script>
-  var a = prompt("Enter a: ");
-  var b = prompt("Enter b: ");
-  document.write(a + " " + b);
-  document.write("</br>")
-  swap();
-
-  function swap() {
+  swap(3, 4);
+  function swap(a, b) {
     let temp = a;
     a = b;
     b = temp;

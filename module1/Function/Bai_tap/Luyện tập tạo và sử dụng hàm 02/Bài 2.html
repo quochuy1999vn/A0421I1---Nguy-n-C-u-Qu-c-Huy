@@ -6,11 +6,10 @@
 </head>
 <body>
 <script>
-    var r = parseInt(prompt("Enter radius: "));
     const PI = 3.14;
-    circle();
+    circle(r);
 
-    function circle() {
+    function circle(r) {
         let perimeter = 2 * r * PI;
         let area = Math.pow(r,2) * PI;
         alert("Perimeter: " + perimeter);

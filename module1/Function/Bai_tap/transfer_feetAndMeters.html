@@ -6,16 +6,12 @@
 </head>
 <body>
 <script>
-    var foot;
-    var meter;
-    foot = parseFloat(prompt("Enter foot: "));
-    meter = parseFloat(prompt("Enter meter: "));
-    alert("Meter = " + footToMeter());
-    alert("Foot = " + meterToFoot());
-    function footToMeter() {
+    alert("Meter = " + footToMeter(2));
+    alert("Foot = " + meterToFoot(3));
+    function footToMeter(foot) {
         return 0.305 * foot;
     }
-    function meterToFoot() {
+    function meterToFoot(meter) {
         return 3.279 * meter;
     }
 </script>
