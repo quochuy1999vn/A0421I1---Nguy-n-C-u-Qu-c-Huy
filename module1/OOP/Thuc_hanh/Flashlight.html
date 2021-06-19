@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Light</title>
+</head>
+<body>
+  <script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+      setEnergy(energy) {
+        this.energy = energy;
+      }
+
+      getEnergy() {
+        return this.energy;
+      }
+
+      decreaseEnergy() {
+        if (this.energy > 0) {
+          this.energy--;
+        }else {
+            alert("Pin đã cạn. Làm ơn thay pin mới");
+        }
+      }
+    }
+    
+    class Flashlamp{
+        constructor(status) {
+            this.status = status;
+            this.battery = new Battery(100);
+        }
+
+      setBattery(battery) {
+        this.battery = battery;
+      }
+
+      getBattery() {
+        return this.battery;
+      }
+
+      light() {
+        if (this.status) {
+          this.battery.decreaseEnergy();
+        }else {
+          alert("Làm ơn bật đèn");
+        }
+      }
+
+      turnOn() {
+        if (this.battery.decreaseEnergy() > 0) {
+            this.status = true;
+        }
+      }
+
+      turnOff() {
+        this.status = false;
+      }
+    }
+
+    function main() {
+        let flashLamp = new Flashlamp(true);
+        if (flashLamp.status) {
+            alert("Đèn đang bật");
+        }else {
+            alert("Đèn đang tắt");
+        }
+        for (let i = 0; i < 10; i++) {
+            flashLamp.light();
+        }
+        alert("Pin hiện tại: " + flashLamp.getBattery().getEnergy());
+    }
+    main();
+  </script>
+</body>
+</html>

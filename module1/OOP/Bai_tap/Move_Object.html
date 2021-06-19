@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move Object</title>
+</head>
+<body>
+<img id="game" style="position: absolute; left: 0; top: 0; ">
+<script>
+    class Hero {
+        constructor(image, top, left, speed) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.speed = speed;
+        }
+
+        getHeroElement() {
+            let hero = document.getElementById('game');
+
+            hero.src = this.image;
+            hero.style.left = this.left + "px";
+            hero.style.top = this.top +"px";
+
+        }
+
+        moveLeft() {
+            if (this.left > 0) {
+                this.left -= this.speed
+                this.getHeroElement();
+            }
+        }
+
+        moveRight() {
+            this.left += this.speed;
+            this.getHeroElement();
+        }
+
+        moveUp() {
+            if (this.top > 0) {
+                this.top -= this.speed;
+                this.getHeroElement();
+            }
+        }
+
+        moveDown() {
+            this.top += this.speed;
+            this.getHeroElement();
+        }
+    }
+
+    var hero = new Hero("https://somebodyshero.co.uk/wp-content/uploads/2021/04/LIGHTER2.png", 0, 0, 20);
+
+    hero.getHeroElement();
+    let checkQueoPhai = true;
+    let checkBayLen = false;
+
+    function move() {
+        if (hero.left < window.innerWidth -400 && checkQueoPhai) {
+            hero.moveRight();
+        }else if (hero.top < window.innerHeight - 500 && !checkBayLen) {
+            hero.moveDown();
+            checkQueoPhai = false;
+        }else if (hero.left > 0 && !checkQueoPhai) {
+            hero.moveLeft();
+            checkBayLen = true;
+        }else if (hero.top > 0 && checkBayLen) {
+            hero.moveUp();
+        }else {
+            checkQueoPhai = true;
+            checkBayLen = false;
+        }
+        setTimeout(move, 50);
+    }
+
+    move();
+</script>
+</body>
+</html>
