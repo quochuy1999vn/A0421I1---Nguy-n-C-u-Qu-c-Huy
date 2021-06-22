@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote</title>
+</head>
+<body>
+<script>
+    class Remote {
+        code(code1) {
+            if ((tv.status)) {
+                this.code1 = code1;
+                switch (this.code1) {
+                    case 1:
+                        alert("VTV1");
+                        break;
+                    case 2:
+                        alert("Discovery Asia HD");
+                        break;
+                    case 3:
+                        alert("VTV3");
+                        break;
+                    case 4:
+                        alert("VTV6");
+                        break;
+                    case 5:
+                        alert("HBO");
+                        break;
+                    case 6:
+                        alert("Cartoon NetWork");
+                        break;
+                    case 7:
+                        alert("iTV");
+                        break;
+                    default:
+                        alert("Bạn chọn sai số. Vui lòng chọn lại");
+                        break;
+
+                }
+            }
+
+        }
+
+        changeChannel(channel) {
+            this.code(channel);
+            tv.describeChannel();
+        }
+
+        volume() {
+            let volume = 50;
+            alert(volume);
+        }
+    }
+    
+    class TV {
+        constructor(status) {
+            this.status = status;
+        }
+        describeChannel() {
+            if (this.status) {
+                switch (remote.code1) {
+                    case 1:
+                        alert("Thời sự");
+                        break;
+                    case 2:
+                        alert("Thế giới động vật");
+                        break;
+                    case 3:
+                        alert("Phim truyền hình");
+                        break;
+                    case 4:
+                        alert("Bóng đá");
+                        break;
+                    case 5:
+                        alert("Phim lẻ");
+                        break;
+                    case 6:
+                        alert("Hoạt hình");
+                        break;
+                    case 7:
+                        alert("Ca nhạc");
+                }
+            }
+        }
+
+        volumeNow() {
+            if (this.status) {
+                return alert(remote.volume());
+            }else {
+                alert("TV đã tắt vui lòng mở lên để thao tác")
+            }
+        }
+
+        upVolume(number) {
+            if (this.status) {
+                return alert(remote.volume() + number);
+            }else {
+                alert("TV đã tắt vui lòng mở lên để thao tác")
+            }
+        }
+
+        downVolume(number) {
+            if (this.status) {
+                return alert(this.volumeNow() - number);
+            }else {
+                alert("TV đã tắt vui lòng mở lên để thao tác")
+            }
+        }
+
+        turnOn() {
+           this.status = true;
+           alert("TV đã bật");
+        }
+
+        turnOff() {
+            this.status = false;
+            alert("TV đã tắt");
+
+        }
+    }
+
+    let remote = new Remote()
+    let tv = new TV();
+
+    tv.turnOn();
+    // remote.code(1);
+    // tv.describeChannel();
+    // remote.changeChannel(2);
+    tv.volumeNow();
+    tv.upVolume(2);
+</script>
+</body>
+</html>
