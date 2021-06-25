@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+  let h = prompt("Enter h: ");
+
+  for (let i = 1; i <= h; i++) {
+    let string = "";
+    for (let j = i; j <= h-1; j++) {
+      string += "   ";
+    }
+    for (let star = 1; star <= (2*i-1); star++) {
+      if (i == h || star == 1 || star == (2*i-1)) {
+        string += " * ";
+      }else {
+        string += "   ";
+      }
+    }
+    console.log(string);
+  }
+</script>
+</body>
+</html>

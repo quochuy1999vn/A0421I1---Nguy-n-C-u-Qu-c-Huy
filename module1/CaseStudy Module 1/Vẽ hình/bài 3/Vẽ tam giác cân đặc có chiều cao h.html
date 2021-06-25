@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  let h = prompt("Enter h: ");
+
+  for (let i = 1; i <= h; i++) {
+    let string = "";
+    for (let j = 1; j <= h-i; j++) {
+      string += "   ";
+    }
+    for (let star = 1; star <= 2*i-1; star++) {
+      string += " * ";
+    }
+    console.log(string);
+  }
+</script>
+</body>
+</html>
