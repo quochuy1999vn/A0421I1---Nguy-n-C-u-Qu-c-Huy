@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+  var number = [];
+  var temp;
+
+  number = parseInt(prompt("Enter number:"));
+
+
+
+
+  let temp3 = number / 1000;
+
+  if (Math.floor(temp3) == 1) {
+      document.write("Một ")
+  }
+
+  let temp2 = (number % 1000) / 100;
+
+  if (Math.floor(temp2) == 2) {
+      document.write("Hai ");
+  }
+
+  let temp1 = (number % 100) / 10;
+
+  if (Math.floor(temp1) == 3) {
+      document.write("Ba ");
+  }
+
+  temp = number % 10
+  if (temp == 4) {
+      document.write("Bốn");
+  }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

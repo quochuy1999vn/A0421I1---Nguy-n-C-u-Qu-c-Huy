@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  var s1 = "aabcc";
+  var s2 = "adcaa";
+  var count = 0;
+
+  for (let i = 0; i < s1.length; i++) {
+    if (s2.indexOf(s1[i])) {
+      count++;
+      s2 += s2.replace(s1[i]);
+    }
+  }
+  document.write(count);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+  var numerators = [5, 2, 5];
+  var denominators = [6, 3, 4];
+  var max = numerators[0] / denominators[0];
+
+  for (let i = 0; i < numerators.length; i++) {
+      if ((numerators[i]/denominators[i]) > max) {
+        max = numerators[i]/denominators[i];
+      }
+  }
+  document.write(max);
+</script>
+</body>
+</html>

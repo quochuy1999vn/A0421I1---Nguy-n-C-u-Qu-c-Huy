@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+  function  convertString(word) {
+    let firstChar = word.charAt(0);
+    let lastChar = word.slice(1, word.length).toLowerCase();
+    return firstChar.toUpperCase().concat(lastChar);
+  }
+
+  function run() {
+    let inputstring = prompt("Input String: ")
+    /* Mỗi từ cách nhau 1 khoảng trắng, dùng split với tham số là khoảng trắng ' '
+    để tách từng từ ra và xếp vào mảng mới tạo arrWord */
+    let arrWord = inputstring.split('');
+    /* Sử dụng hàm convertString đã tạo ở trên để in hoa chữ cái đầu tiên của các
+    từ có trong mảng arrWord, sau đó xếp vào mảng mới tạo newArrWord */
+    let newArrWord = arrWord.map(convertString);
+    /* Dùng hàm join với tham số là khoảng trắng ' ' để gộp các phần tử trong
+    mảng newArrWord thành chuỗi và in ra màn hình */
+    let result = newArrWord.join('');
+    alert(result);
+  }
+
+  run();
+</script>
+</body>
+</html>

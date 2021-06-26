@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+var menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+var price = [7000, 12000, 12000, 12000, 5000, 10000];
+
+document.write("<h2>Menu Nước</h2>")
+
+document.write("<table border=''>")
+for (let i = 0; i < menu.length; i++) {
+    document.write("<tr>");
+    document.write("<td>" + (i+1) + "</td>");
+    document.write("<td>" + menu[i] + "</td>");
+    document.write("<td id='price" + i + "'>" + price[i] + "</td>");
+    document.write("<td>" + "<input type='text' id='number" + i + "'>" + "</td>");
+    document.write("</tr>")
+}
+document.write("</table>")
+
+document.write("<button onclick='order()'>Order</button>")
+
+function order() {
+    let result = 0;
+    for (let i = 0; i < menu.length; i++) {
+        let number = document.getElementById("number"+ i).value;
+        let price = document.getElementById("price"+ i).innerText;
+        if (!number) {
+            number = 0;
+        }
+         result += number * price;
+    }
+    alert("Tổng tiền mà bạn phải thanh toán là: " + result);
+    
+}
+</script>
+</body>
+</html>
