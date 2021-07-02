@@ -6,27 +6,58 @@
 </head>
 <body>
 <script>
-  function  convertString(word) {
-    let firstChar = word.charAt(0);
-    let lastChar = word.slice(1, word.length).toLowerCase();
-    return firstChar.toUpperCase().concat(lastChar);
-  }
+    // var str = prompt("Enter string: ");
 
-  function run() {
-    let inputstring = prompt("Input String: ")
-    /* Mỗi từ cách nhau 1 khoảng trắng, dùng split với tham số là khoảng trắng ' '
-    để tách từng từ ra và xếp vào mảng mới tạo arrWord */
-    let arrWord = inputstring.split('');
-    /* Sử dụng hàm convertString đã tạo ở trên để in hoa chữ cái đầu tiên của các
-    từ có trong mảng arrWord, sau đó xếp vào mảng mới tạo newArrWord */
-    let newArrWord = arrWord.map(convertString);
-    /* Dùng hàm join với tham số là khoảng trắng ' ' để gộp các phần tử trong
-    mảng newArrWord thành chuỗi và in ra màn hình */
-    let result = newArrWord.join('');
-    alert(result);
-  }
 
-  run();
+    // let temp = str.trim();
+    // let arrWord = [];
+    // function firstWord(temp) {
+    //     let firstString = temp.slice(0,6);
+    //     let firstChar = firstString.charAt(0);
+    //     let lastChar = firstString.slice(1, firstString.length).toLowerCase();
+    //     return  firstChar.toUpperCase().concat(lastChar);
+    // }
+    //
+    // function midWord(temp) {
+    //     let midString = temp.slice(10,13);
+    //     let firstChar = midString.charAt(0);
+    //     let lastChar = midString.slice(1, midString.length).toLowerCase();
+    //     return  firstChar.toUpperCase().concat(lastChar);
+    // }
+    //
+    // function lastWord(temp) {
+    //     let lastString = temp.slice(16,19);
+    //     let firstChar = lastString.charAt(0);
+    //     let lastChar = lastString.slice(1, lastString.length).toLowerCase();
+    //     return  firstChar.toUpperCase().concat(lastChar);
+    // }
+    //
+    // arrWord.push(firstWord(temp));
+    // arrWord.push(midWord(temp));
+    // arrWord.push(lastWord(temp));
+    // arrWord.join(" ");
+    // alert(arrWord);
+
+
+    let str=prompt("Enter your String : ");
+    function convertString(str){
+        let string  = str.split(' ');
+        let result = ''
+        let temp;
+        for(let i = 0; i < string.length; i++)
+        {
+            temp = string[i].trim().toLowerCase();
+            if(temp != ''){
+                temp = temp.substr(0,1).toUpperCase()+temp.substr(1);
+                result += temp+' ';
+            }
+        }return result;
+    }
+    alert(convertString(str));
+
+
+
+
 </script>
 </body>
 </html>

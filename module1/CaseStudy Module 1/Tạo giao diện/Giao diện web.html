@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.js" integrity="sha512-ia48mJh6IXv6baAI07Ib/crgsG/MD4tbSnOndWLo3GSExMhYsn1xPbni40VamCaXWk79t1dxi/JahsqOFazkew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 13px;
+        width: 900px;
+        margin: 0px auto;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+    #search {
+        background-color: darkgrey;
+        height: 60px;
+    }
+    #G {
+        height: 50px;
+        background-color: white;
+        text-align: center;
+        color: black;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+    }
+
+    #main #left {
+        width: 200px;
+        background-color: white;
+        min-height: 200px;
+        float: left;
+    }
+    #main #right {
+        width: 700px;
+        background-color: white;
+        min-height: 200px;
+        float: left;
+
+    }
+    
+    #bot {
+        width: 900px;
+        height: 30px;
+        background-color: darkgrey;
+        clear: left;
+        border-top: 2px solid black;
+    }
+
+    #search ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #search ul li {
+        list-style: none;
+        float: left;
+    }
+
+    #search ul li a {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    #G ul{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #G ul li {
+        list-style: none;
+        float: left;
+        
+    }
+
+    #G ul li a {
+        text-decoration: none;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0px 5px 0px 5px;
+    }
+
+    #G ul li a.tieude1 {
+        margin-left: 270px;
+        color: black;
+        font-weight: bold;
+
+    }
+
+    #main ul{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #main ul li {
+        list-style: none;
+        float: top;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+
+    #main ul li select {
+        border-right: 2px solid black;
+    }
+
+    #icon5 {
+        border-radius: 15px;
+        margin-left: 10px;
+    }
+
+</style>
+<body>
+<div id="search">
+    <ul>
+        <li style="font-size: 30px"><a href="#" title="left"><i class="fas fa-arrow-left" id="icon" style="color: white"></i></a></li>
+        <li style="font-size: 30px"><a href="#" title="right"><i class="fas fa-arrow-right" id="icon1" style="color: white"></i></a></li>
+        <li style="font-size: 30px"><a href="#" title="close"><i class="fas fa-times" id="icon2" style="color: black"></i></a></li>
+        <li style="font-size: 30px"><a href="#" title="home"><i class="fas fa-house-user" id="icon3" style="color: white"></i></a></li>
+        <li><a href="#" title="search1"><input type="text" id="icon4" value="http://" size="85"></a></li>
+        <li style="font-size: 20px"><a href="#" title="none"><i class="fas fa-search" style="color: white"></i></a></li>
+    </ul>
+</div>
+<div id="G">
+    <ul>
+        <li style="font-size: 40px"><a href="#" title="g"><i class="fab fa-google" style="color: black"></i></a></li>
+        <li><a href="#" title="tieude" class="tieude1">Hệ thống quản lý bài tập Casestudy module 1</a></li>
+    </ul>
+</div>
+<div id="main">
+    <div id="left" class="left" style="border-right: 2px solid black">
+        <ul>
+            <li><select>
+                <option>Bài tập 1</option>
+            </select></li>
+            <li><select>
+                <option>Bài tập 2</option>
+            </select></li>
+            <li><select>
+                <option>Bài tập 3</option>
+            </select></li>
+            <li><select>
+                <option>Bài tập 4</option>
+            </select></li>
+            <li><select>
+                <option>Bài tập 5</option>
+            </select></li>
+        </ul>
+    </div>
+<!--    <div id="right"></div>-->
+</div>
+<div id="bot"><i class="fas fa-heartbeat" style="font-size: 30px; margin-left: 860px"></i></div>
+</body>
+</html>
