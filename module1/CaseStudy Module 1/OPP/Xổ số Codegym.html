@@ -5,6 +5,7 @@
     <title>Xổ số CodeGym</title>
 </head>
 <body>
+<p id="result"></p>
 <script>
     class Vietlot {
         constructor(number1,number2,number3,number4,number5,number6) {
@@ -20,21 +21,21 @@
 
     let arrayLottery = [];
 
+    var name = prompt("Xin chào bạn đã đên với Vietlot, mời bạn nhập tên: ");
+
     function displayLottery() {
         document.body.innerText = "";
         let result = "<button onclick='buyLottery()'>Buy Lottery</button>" +
-            "<button onclick='seeResult()'>See result</button>" +
-            "<button onclick='giaiNhat()'>quay</button>";
-        result += "<table border='1'>";
+            "<button onclick='seeResult()'>See result</button>";
+        result += "<table border='' style='border: outset'>";
         for (let i = 0; i < arrayLottery.length; i++) {
             result += "<tr>";
-            result += "<td>" + (i+1) + "</td>"
-            result += "<td>" + arrayLottery[i].number1 + "</td>"
-            result += "<td>" + arrayLottery[i].number2 + "</td>"
-            result += "<td>" + arrayLottery[i].number3 + "</td>"
-            result += "<td>" + arrayLottery[i].number4 + "</td>"
-            result += "<td>" + arrayLottery[i].number5 + "</td>"
-            result += "<td>" + arrayLottery[i].number6 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number1 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number2 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number3 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number4 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number5 + "</td>"
+            result += "<td width='30' style='text-align: center'>" + arrayLottery[i].number6 + "</td>"
             result += "</tr>";
         }
         result += "</table>"
@@ -48,29 +49,35 @@
 
             choose = parseInt(prompt("Chọn 1 để random:" + "\n" + "Chọn 2 để tự nhập: "));
 
-            switch (choose) {
-                case 1:
-                    for (let i = 1; i <= 6; i++) {
-                        lottery[i] = Math.floor(Math.random()*99)
-                    }
-                    arrayLottery.push(new Vietlot(lottery[1],lottery[2],lottery[3],lottery[4],lottery[5],lottery[6],))
-                    displayLottery();
-                    break;
-                case 2:
-                    let result = "Số 1: <input id='number1'>";
-                    result += "Số 2: <input id='number2'>";
-                    result += "Số 3: <input id='number3'>";
-                    result += "Số 4: <input id='number4'>";
-                    result += "Số 5: <input id='number5'>";
-                    result += "Số 6: <input id='number6'>";
-                    result += "<button onclick='finishBuy()'>Finish Lottery</button>";
-                    displayLottery();
-                    document.write(result);
-                    break;
-                default:
-                    alert("Bạn đã nhập sai số, vui lòng nhập lại");
-                    break;
+            if (arrayLottery.length >=4) {
+                alert("Xin lỗi " + name + " , chỉ được phép mua tối đa 4 vé");
+            }else {
+                switch (choose) {
+                    case 1:
+                        for (let i = 1; i <= 6; i++) {
+                            lottery[i] = Math.floor(Math.random()*99)
+                        }
+                        arrayLottery.push(new Vietlot(lottery[1],lottery[2],lottery[3],lottery[4],lottery[5],lottery[6],))
+                        displayLottery();
+                        break;
+                    case 2:
+                        let result = "Số 1: <input id='number1'>";
+                        result += "Số 2: <input id='number2'>";
+                        result += "Số 3: <input id='number3'>";
+                        result += "Số 4: <input id='number4'>";
+                        result += "Số 5: <input id='number5'>";
+                        result += "Số 6: <input id='number6'>";
+                        result += "<button onclick='finishBuy()'>Finish Lottery</button>";
+                        displayLottery();
+                        document.write(result);
+                        document.getElementById("result").innerText = result;
+                        break;
+                    default:
+                        alert("Bạn đã nhập sai số, vui lòng nhập lại");
+                        break;
+                }
             }
+            displayLottery();
     }
 
     function finishBuy() {
@@ -85,79 +92,54 @@
         displayLottery();
     }
 
-    function f() {
-        var lottery = [];
-        let number1 = document.getElementById("number1").value;
-        let number2 = document.getElementById("number2").value;
-        let number3 = document.getElementById("number3").value;
-        let number4 = document.getElementById("number4").value;
-        let number5 = document.getElementById("number5").value;
-        let number6 = document.getElementById("number6").value;
+    function seeResult() {
+        let lottery = [];
+        for (let i = 1; i <= 6; i++) {
+            lottery[i] = Math.floor(Math.random()*99)
+        }
+        var firstPrize = new Vietlot(lottery[1],lottery[2],lottery[3],lottery[4],lottery[5],lottery[6]);
 
-        lottery.push(new Vietlot(number1,number2,number3,number4,number5,number6));
-        displayLottery();
-        // var firstPrize = new Vietlot(lottery[1],lottery[2],lottery[3],lottery[4],lottery[5],lottery[6]);
-    }
-    function giaiNhat() {
-
-        let result = "Số 1: <input id='number1'>";
-        result += "Số 2: <input id='number2'>";
-        result += "Số 3: <input id='number3'>";
-        result += "Số 4: <input id='number4'>";
-        result += "Số 5: <input id='number5'>";
-        result += "Số 6: <input id='number6'>";
-        result += "<button onclick='f()'>Finish Lottery</button>";
-        displayLottery();
-        document.write(result);
-
-    }
-
-    function seeResult(lottery) {
-        // let lottery = [];
-        // for (let i = 1; i <= 6; i++) {
-        //     lottery[i] = Math.floor(Math.random()*99)
-        // }
-        // let firstPrize = new Vietlot(lottery[1],lottery[2],lottery[3],lottery[4],lottery[5],lottery[6]);
-
-        let result = "<table>";
+        let result = "<table border='' style='border: outset'>";
+        document.write("<h3>Kết quả xổ số</h3>")
         result += "<tr>"
-        result += "<td>" + "Giải nhất" + "</td>";
-        result += "<td id='giainhat'>" + firstPrize.number1 + " " +firstPrize.number2 + " " + firstPrize.number3 + " " + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
+        result += "<td style='color: red'>" + "Giải nhất" + "</td>";
+        result += "<td style='color: red; text-align: right'>" + firstPrize.number1 + " " + firstPrize.number2 + " " + firstPrize.number3 + " " + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
         result += "</tr>";
         result += "<tr>"
-        result += "<td>" + "Giải nhi" + "</td>";
-        result += "<td id='giainhì'>" + firstPrize.number2 + " " + firstPrize.number3 + " " + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
+        result += "<td style='color: orange'>" + "Giải nhì" + "</td>";
+        result += "<td style='color: orange; text-align: right'>"+ firstPrize.number2 + " " + firstPrize.number3 + " " + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
         result += "</tr>";
         result += "<tr>"
-        result += "<td>" + "Giải khuyến khích" + "</td>";
-        result += "<td id='giaikhuyenkhich'>" + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
+        result += "<td style='color: blue'>" + "Giải khuyến khích" + "</td>";
+        result += "<td style='color: blue; text-align: right'       >" + firstPrize.number4 + " " + firstPrize.number5 + " " + firstPrize.number6 + "</td>";
         result += "</tr>";
         result += "</table>"
 
         document.write(result);
 
-        if (lottery[i].number1 == arrayLottery[i].number1) {
-            alert("aa")
+
+        for (let i = 0; i < arrayLottery.length; i++) {
+            if (firstPrize.number1 == arrayLottery[i].number1 && firstPrize.number2 == arrayLottery[i].number2 &&
+                firstPrize.number3 == arrayLottery[i].number3 && firstPrize.number4 == arrayLottery[i].number4 &&
+                firstPrize.number5 == arrayLottery[i].number5 && firstPrize.number6 == arrayLottery[i].number6) {
+                alert("Chúc mừng bạn trúng giải nhất");
+            }else  if (firstPrize.number2 == arrayLottery[i].number2
+                && firstPrize.number3 == arrayLottery[i].number3
+                && firstPrize.number4 == arrayLottery[i].number4
+                && firstPrize.number5 == arrayLottery[i].number5
+                && firstPrize.number6 == arrayLottery[i].number6) {
+                alert("Chúc mừng bạn trúng giải nhì");
+            }else if (firstPrize.number4 == arrayLottery[i].number4
+                && firstPrize.number5 == arrayLottery[i].number5
+                && firstPrize.number6 == arrayLottery[i].number6) {
+                alert("Chúc mừng bạn trúng giải khuyến khích")
+            }else {
+                alert("Chúc bạn may mắn lần sau")
+                break;
+            }
         }
 
-        // if (firstPrize.number1 == arrayLottery[i].number1 && firstPrize.number2 == arrayLottery[i].number2 &&
-        //     firstPrize.number3 == arrayLottery[i].number3 && firstPrize.number4 == arrayLottery[i].number4 &&
-        //     firstPrize.number5 == arrayLottery[i].number5 && firstPrize.number6 == arrayLottery[i].number6) {
-        //     alert("Chúc mừng bạn trúng giải nhất");
-        // }else  if (firstPrize.number2 == arrayLottery[i].number2
-        //     && firstPrize.number3 == arrayLottery[i].number3
-        //     && firstPrize.number4 == arrayLottery[i].number4
-        //     && firstPrize.number5 == arrayLottery[i].number5
-        //     && firstPrize.number6 == arrayLottery[i].number6) {
-        //     alert("Chúc mừng bạn trúng giải nhì");
-        // }else if (firstPrize.number4 == arrayLottery[i].number4
-        //     && firstPrize.number5 == arrayLottery[i].number5
-        //     && firstPrize.number6 == arrayLottery[i].number6) {
-        //     alert("Chúc mừng bạn trúng giải khuyến khích")
-        // }else {
-        //     alert("Chúc bạn may mắn lần sau")
-        // }
-        displayLottery();
+
     }
     displayLottery();
 </script>
