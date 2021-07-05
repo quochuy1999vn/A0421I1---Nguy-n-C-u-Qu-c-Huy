@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let preFixSum = [];
+  let num;
+
+  do {
+    num = parseInt(prompt("Enter length of array: "));
+  }while (num < 0 || isNaN(num));
+
+  for (let i = 0; i < num; i++) {
+    arr[i] = parseInt(prompt("Enter element [" + (i+1) + "]"));
+  }
+
+  for (let i = 0; i < num; i++) {
+    preFixSum[i] = arr[i];
+    if (i > 0) {
+      preFixSum[i] = preFixSum[i-1] + arr[i];
+    }
+  }
+
+  alert(preFixSum)
+</script>
+</body>
+</html>
