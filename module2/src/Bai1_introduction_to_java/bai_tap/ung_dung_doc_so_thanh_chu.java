@@ -91,8 +91,13 @@ public class ung_dung_doc_so_thanh_chu {
         } else {
             switch (number2) {
                 case 0:
-                    System.out.print(" and");
-                    break;
+                    if (number3 == 0) {
+                        System.out.print("");
+                        break;
+                    }else {
+                        System.out.print(" and");
+                        break;
+                    }
                 case 1:
                     if (number3 == 0) {
                         System.out.print(" and ten");
