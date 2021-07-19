@@ -15,13 +15,20 @@ public class Sum_the_number_in_a_specified_column {
         System.out.print("Enter row: ");
         row = input.nextInt();
 
-        arr = new int[col][row];
+        arr = new int[row][col];
 
-        for (int i = 0; i < col; i++) {
-            for (int j = 0; j < row; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 System.out.print("Enter element [" + i + "][" + j + "]: ");
                 arr[i][j] = input.nextInt();
             }
+        }
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
         }
 
         int sum = 0;
@@ -31,7 +38,7 @@ public class Sum_the_number_in_a_specified_column {
         x = input.nextInt();
 
         for (int i = 0; i < row; i++) {
-            sum += arr[x][row];
+            sum += arr[i][x];
         }
 
         System.out.print("Sum: " + sum);
