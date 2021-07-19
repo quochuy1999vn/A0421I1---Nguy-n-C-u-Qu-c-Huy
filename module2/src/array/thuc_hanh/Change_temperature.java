@@ -2,7 +2,7 @@ package array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class change_temperature {
+public class Change_temperature {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double fahrenheit;

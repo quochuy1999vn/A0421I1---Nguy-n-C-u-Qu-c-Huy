@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class find_max_element_in_two_dimensional_array {
+public class Find_max_element_in_two_dimensional_array {
     public static void main(String[] args) {
         int m, n;
 

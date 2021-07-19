@@ -2,7 +2,7 @@ package array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class dao_nguoc_cac_phan_tu_cua_mang {
+public class Dao_nguoc_cac_phan_tu_cua_mang {
     public static void main(String[] args) {
         int[] array;
         int size;

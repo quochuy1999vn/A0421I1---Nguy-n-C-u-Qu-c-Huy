@@ -2,7 +2,7 @@ package array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class find_element_in_array {
+public class Find_element_in_array {
     public static void main(String[] args) {
         String[] students = {"Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily"};
 

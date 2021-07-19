@@ -1,6 +1,6 @@
 package loop.bai_tap;
 
-public class show_first_20_primes {
+public class Show_first_20_primes {
     public static void main(String[] args) {
         System.out.print("20 số nguyên tố đầu tiên: ");
         int i = 0;

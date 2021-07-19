@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class count_characters_in_string {
+public class Count_characters_in_string {
     public static void main(String[] args) {
         String str;
         char x = 'a';
