@@ -2,7 +2,7 @@ package Bai1_introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
-public class ung_dung_doc_so_thanh_chu {
+public class UngDungDocSoThanhChu {
     public static void main(String[] args) {
         int number, number1, number2, number3;
 

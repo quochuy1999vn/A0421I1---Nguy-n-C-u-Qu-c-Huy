@@ -1,6 +1,6 @@
 package loop.bai_tap;
 
-public class Hien_thi_cac_loai_hinh {
+public class HienThiCacLoaiHinh {
 
     public static void rectangle() {
         for (int i = 0; i < 5; i++) {

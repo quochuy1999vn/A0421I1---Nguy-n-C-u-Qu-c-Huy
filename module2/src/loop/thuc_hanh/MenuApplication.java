@@ -2,7 +2,7 @@ package loop.thuc_hanh;
 
 import java.util.Scanner;
 
-public class menu_application {
+public class MenuApplication {
     public static void main(String[] args) {
         int choose;
         Scanner scanner = new Scanner(System.in);

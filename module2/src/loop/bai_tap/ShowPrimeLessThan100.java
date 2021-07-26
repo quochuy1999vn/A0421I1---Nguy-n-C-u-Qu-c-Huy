@@ -1,6 +1,6 @@
 package loop.bai_tap;
 
-public class Show_prime_less_than_100 {
+public class ShowPrimeLessThan100 {
 
     public static boolean isPrimeNumber(int n) {
         // số nguyên < 2 không phải là số nguyên tố

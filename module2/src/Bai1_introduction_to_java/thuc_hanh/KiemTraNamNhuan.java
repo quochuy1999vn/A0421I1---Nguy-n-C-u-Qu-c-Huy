@@ -2,7 +2,7 @@ package Bai1_introduction_to_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class kiem_tra_nam_nhuan {
+public class KiemTraNamNhuan {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

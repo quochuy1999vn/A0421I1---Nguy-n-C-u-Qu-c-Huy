@@ -2,7 +2,7 @@ package loop.thuc_hanh;
 
 import java.util.Scanner;
 
-public class ucln {
+public class UCLN {
     public static void main(String[] args) {
         int a, b;
 

@@ -2,7 +2,7 @@ package Bai1_introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
-public class doi_tien {
+public class DoiTien {
     public static void main(String[] args) {
         int usd, vnd, choose;
         System.out.println("-- CHANGE MONEY --");
