@@ -1,29 +1,44 @@
 package class_and_object_in_java.class_quadraticEquation;
 
 public class QuadraticEquation {
-    int a, b, c;
+    private double a, b, c;
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 
-    public void setC(int c) {
+    public void setC(double c) {
         this.c = c;
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
+
+    public double getDiscriminant() {
+        return (this.b*2) - (4*this.a*this.c);
+    }
+
+    public double getRoot1() {
+            return  -this.b + Math.sqrt(getDiscriminant()) / (2 * this.a);
+    }
+
+    public double getRoot2() {
+            return  -this.b - Math.sqrt(getDiscriminant()) / (2 * this.a);
+    }
+
+
+
 }
