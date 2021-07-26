@@ -2,7 +2,7 @@ package array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Counts_the_number_of_students_pass {
+public class CountsTheNumberOfStudentsPass {
     public static void main(String[] args) {
         int[] arr;
         int size;

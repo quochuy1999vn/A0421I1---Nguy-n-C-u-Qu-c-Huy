@@ -2,7 +2,7 @@ package array.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Find_elementMax_of_array {
+public class FindElementMaxOfArray {
     public static void main(String[] args) {
         int[] array;
         int size;

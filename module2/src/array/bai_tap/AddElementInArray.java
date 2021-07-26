@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class Add_element_in_array {
+public class AddElementInArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int[] arr = new int[10];

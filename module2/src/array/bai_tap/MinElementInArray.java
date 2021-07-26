@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class Min_element_in_array {
+public class MinElementInArray {
     public static void main(String[] args) {
         int size;
 

@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class Sum_the_numbers_on_the_main_diagonal_of_the_matrix {
+public class SumTheNumbersOnTheMainDiagonalOfTheMatrix {
     public static void main(String[] args) {
         int n;
         int[][] arr;

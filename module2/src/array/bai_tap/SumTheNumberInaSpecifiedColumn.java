@@ -2,7 +2,7 @@ package array.bai_tap;
 
 import java.util.Scanner;
 
-public class Sum_the_number_in_a_specified_column {
+public class SumTheNumberInaSpecifiedColumn {
     public static void main(String[] args) {
         int row, col;
         int[][] arr;
