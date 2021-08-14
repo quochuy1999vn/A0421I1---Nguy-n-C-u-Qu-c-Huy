@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/Git&amp;HTML/GitProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceColorable/apj-shape" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceResizeable/apj-shape" vcs="Git" />
+  </component>
+</project>
