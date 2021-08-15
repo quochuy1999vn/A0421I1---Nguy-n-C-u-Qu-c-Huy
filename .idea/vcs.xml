@@ -5,5 +5,8 @@
     <mapping directory="$PROJECT_DIR$/module1/Git&amp;HTML/GitProject" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceColorable/apj-shape" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceResizeable/apj-shape" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/cleanCode_refactoring/refactoring_changesName_detachedConstant/apj-calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/cleanCode_refactoring/thuc_hanh/refactoring_splitMethod/apj-cylinder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/cleanCode_refactoring/thuc_hanh/refactoring_splitVariable/apj-fizzbuzz" vcs="Git" />
   </component>
 </project>
