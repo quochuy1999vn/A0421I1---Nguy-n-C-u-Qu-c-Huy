@@ -20,7 +20,7 @@ public class FacitilyServicesImpl implements FacilityServices {
     private static final String REGEX_INT = "^[1-9]|([1][0-9])$";
     private static final String REGEX_AREA = "^([3-9]\\d|[1-9]\\d{2,})$";
     private static final String REGEX_TIME = "^[1-9]|([1][0-9])|([2][0-4])$";
-    private static final String REGEX_DAY = "^[1-9]|([1][0-9])$";
+        private static final String REGEX_DAY = "^[1-9]|([1][0-9])$";
     private static final String REGEX_MONTH = "^[1-9]|([1][1-2])$";
     private static final String REGEX_VILLA = "[A-Z][a-z]+";
     private static final String REGEX_HOUSE = "[A-Z][a-z]+";
