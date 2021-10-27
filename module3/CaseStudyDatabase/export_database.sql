@@ -41,7 +41,17 @@ where dichvu.IDDichVu not in(
 );
 
 -- task 7
-select 
+select IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu
+from DichVu
+	left join LoaiDichVu on LoaiDichVu.IDLoaiDichVu = dichvu.IDLoaiDichVu
+ where dichvu.IDLoaiDichVu not in (
+     select IDDichVu
+     from hopdong
+     where IDDichVu is not null and year((hopdong.NgayLamHopDong))=2019)
+     and  dichvu.IDDichVu in (
+     select IDDichVu
+     from hopdong
+     where IDDichVu is not null and year((hopdong.NgayLamHopDong))=2018);
 
 
 
