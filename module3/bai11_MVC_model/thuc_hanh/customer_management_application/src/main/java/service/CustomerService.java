@@ -2,7 +2,7 @@ package service;
 
 import model.Customer;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 public interface CustomerService {
