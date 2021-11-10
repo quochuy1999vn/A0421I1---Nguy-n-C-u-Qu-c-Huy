@@ -108,3 +108,76 @@ from dichvudikem
     left join khach_hang on khach_hang.IDKhachHang = hop_dong.IDKhachHang
     left join loai_khach on loai_khach.IDLoaiKhach = khach_hang.IDLoaiKhachHang
    where loai_khach.ten_loai_khach = 'Diamond' and (khach_hang.dia_chi='Vinh' or khach_hang.dia_chi = 'Quảng ngãi');
+   
+-- 12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 thángcuối năm 2019 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
+select hp.IDHopDong, nv.HoTen, kh.HoTen, kh.SDT, dichvu.TenDichVu, count(hdct.IDDichVuDiKem) as "Số lượng dịch vụ đi kèm", sum(hd.TienDatCoc)
+from hopdong
+left join nv on nv.IDNhanVien = hp.IDNhanVien
+left join kh on kh.IDKhachHang = hp.IDKhachHang
+left join dv on dv.IDDichVu = hp.IDDichVu
+left join hdct on hdct.IDHopDong = hp.IDHopDong
+left join dvdk on dvdk.IDDichVuDiKem = hdct.IDDichVuDiKem
+where not exists(select hp.IDHopDong where hp.NgayLamHopDong between '2019-01-01' and '2019-06-31')
+and exists(select hp.IDHopDong where hp.NgayLamHopDong between '2019-10-01' and '2019-12-31')
+group by hp.IDHopDong;
+
+-- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+create temporary table temp
+select dichvudikem.IDDichVuDiKem, TenDichVuDiKem, DonVi, Gia , count(hopdongchitiet.IDDichVuDiKem)
+from dichvudikem
+ left join hopdongchitiet on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
+ group by hopdongchitiet.IDDichVuDiKem;
+ select*from temp;
+ 
+ -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
+ select hopdongchitiet.IDHopDong, dichvudikem.TenDichVuDiKem, count(dichvudikem.IDDichVuDiKem) as so_lan_su_dung
+ from dichvudikem
+	left join hopdongchitiet on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
+ group by hopdongchitiet.IDDichVuDiKem
+ having so_lan_su_dung = 1;
+ 
+ -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
+ 
+ select nhanvien.IDNhanVien, hoten, trinhdo.trinhdo, bophan.TenBoPhan, SDT, DiaChi, count(IDHopDong) as so_hop_dong
+ from nhanvien
+	left join hopdong on hopdong.IDNhanVien = nhanvien.IDNhanVien
+    inner join trinhdo on trinhdo.IDTrinhDo = nhanvien.IDTrinhDo
+    inner join bophan on bophan.IDBoPhan = nhanvien.IDBoPhan
+    where year(hopdong.NgayLamHopDong)>=2018 and year(hopdong.NgayLamHopDong)<=2018
+    group by IDNhanVien
+    having so_hop_dong <=3;
+    
+-- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.;
+delete from nhanvien
+where IDNhanVien not in (
+ select hopdong.IDNhanVien
+ from hopdong
+ where IDNhanVien is not null and (year(hopdong.NgayLamHopDong)>=2017 and year(hopdong.NgayLamHopDong)<=2019)
+ group by hopdong.IDNhanVien);
+ 
+ -- 17.	Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.
+update khachhang , (select hopdong.IDKhachHang as id, sum(hopdong.TongTien) as tong_tien from hopdong
+where year(hopdong.NgayLamHopDong) = 2019
+group by hopdong.IDKhachHang
+having TongTien >= 10000) as temp
+set khachhang.IDKhachHang = (select loaikhach.IDLoaiKhach from loaikhach where loaikhach.TenLoaiKhach = "Diamond")
+where khachhang.IDLoaiKhach = (select loaikhach.IDLoaiKhach from loaikhach where loaikhach.TenLoaiKhach = "Platinium")
+and temp.id = khachhang.IDKhachHang;
+
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
+delete from hopdong
+where year(hopdong.NgayLamHopDong)>2016;
+
+-- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi
+update dichvudikem , (select hopdongchitiet.IDDichVuDiKem as id, count(hopdongchitiet.IDDichVuDiKem) as so_lan from hopdongchitiet
+group by hopdongchitiet.IDDichVuDiKem
+having so_lan>10)as temp
+set dichvudikem.Gia = dichvudikem.Gia*2
+where temp.id = dichvudikem.IDDichVuDiKem;
+
+-- 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
+select nhanvien.IDNhanVien as id, nhanvien.HoTen as HoTen, nhanvien.email as email, nhanvien.SDT as SDT, nhanvien.NgaySinh as ngay_sinh, nhanvien.DiaChi as dia_chi
+from nhanvien
+union all
+select khachhang.IDKhachHang as id, khachhang.HoTen as HoTen, khachhang.email as email, khachhang.SDT as SDT, khachhang.NgaySinh as ngay_sinh, khachhang.DiaChi as dia_chi
+from khachhang;
