@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TỜ KHAI Y TẾ</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            var seYear1 = $('#year1');
+            var seYear = $('#year');
+
+            var date = new Date();
+            var cur = date.getFullYear();
+
+            seYear.append('<option value="">-- Năm Sinh --</option>');
+            for (var i = cur; i >= 1900; i--) {
+                seYear.append('<option value="' + i + '">' + i + '</option>');
+            }
+
+            seYear1.append('<option value="">-- Năm --</option>');
+            for (var i = cur; i >= 1900; i--) {
+                seYear1.append('<option value="' + i + '">' + i + '</option>');
+            }
+
+            var seMonth = $('#month');
+
+            seMonth.append('<option value="">-- Tháng --</option>');
+            for (var i = 1; i <= 30; i++) {
+                seMonth.append('<option value="'+i+'">'+i+'</option>');
+            };
+
+            var seDay = $('#day')
+
+            seDay.append('<option value="">-- Ngày --</option>')
+            for (var i = 1; i <= 30; i++) {
+                seDay.append('<option value="' + i + '">' + i + '</option>')
+            }
+            var yearEnd = $('#yearEnd');
+
+            var date = new Date();
+            var cur = date.getFullYear();
+
+            yearEnd.append('<option value="">-- Năm --</option>');
+            for (var i = cur; i >= 1900; i--) {
+                yearEnd.append('<option value="' + i + '">' + i + '</option>');
+            }
+
+            var monthEnd = $('#monthEnd');
+
+            monthEnd.append('<option value="">-- Tháng --</option>');
+            for (var i = 1; i <= 30; i++) {
+                monthEnd.append('<option value="'+i+'">'+i+'</option>');
+            };
+
+            var dayEnd = $('#dayEnd')
+
+            dayEnd.append('<option value="">-- Ngày --</option>')
+            for (var i = 1; i <= 30; i++) {
+                dayEnd.append('<option value="' + i + '">' + i + '</option>')
+            }
+        });
+    </script>
+</head>
+<body>
+    <h2 style="text-align: center">TỜ KHAI Y TẾ</h2>
+    <h4 style="text-align: center">ĐÂY LÀ TÀI LIỆU QUAN TRỌNG, THÔNG TIN CỦA ANH/CHỊ SẼ GIÚP CƠ QUAN Ý TẾ LIÊN LẠC KHI CẦN THIẾT ĐỂ ĐỀ PHÒNG CHỐNG DỊCH
+        BỆNH TRUYỀN NHIỄM</h4>
+    <p style="color: red; text-align: center">Khuyến cáo: Khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể sử lý hình sự</p>
+
+<!--    <form th:action="/save" th:object="${medicalDeclaration}" method="post" novalidate="novalidate">-->
+
+<!--    </form>-->
+    <form th:action="@{save}" th:object="${medicalDeclaration}" method="POST" novalidate="novalidate">
+        <div>
+            <label >Họ Tên (ghi chữ IN HOA)</label> <!--<label>(*)</label> -->
+            <input type="text" th:field="*{name}">
+        </div>
+        <div>
+            <label>Năm sinh</label>
+            <select name="yearOfDate" id="year" th:field="*{yearOfDate}"></select>
+        </div>
+        <div>
+        <label>Giới tính</label></div>
+        <div> <select th:field="*{gender}">
+            <option name="gender" th:value="'nam'" th:text="Male"></option>
+            <option name="gender" th:value="'nu'" th:text="Female"></option>
+        </select>
+        </div>
+        <div>
+        <label>Quốc Tịch</label></div>
+        <div>
+        <select th:field="*{nationality}">
+            <option name="nationality" th:value="'vietnamese'" th:text="Việt Nam"></option>
+            <option name="nationality" th:value="'japanese'" th:text="Nhật Bản"></option>
+            <option name="nationality" th:value="'england'" th:text="Anh">Anh</option>
+            <option name="nationality" th:value="'france''" th:text="Pháp"></option>
+            <option name="nationality" th:value="'korea'" th:text="Hàn Quốc"></option>
+        </select>
+        </div>
+        <div>
+        <label>Số hộ chiếu hoặc số CMND hoặc giấy thông hành hợp pháp khác</label><label>(*)</label>
+        <br/>
+        <input type="text" th:field="*{identityCard}"></div>
+        <div>
+        <label>Thông tin đi lại</label><label>(*)</label>
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="planes"> Máy bay
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="planes"> Ô tô
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="train"> Tàu hoả
+        <input type="radio" th:field="*{vehicle}" name="vehicle" value="other"> Khác (ghi rõ)
+        </div>
+        <div>
+        <label>Ngày khởi hành</label>
+        <select id="day" th:field="*{departureDay}" name="departureDay"></select>
+        <select id="month" th:field="*{departureDay}" name="departureDay"></select>
+        <select id="year1" th:field="*{departureDay}" name="departureDay"></select>
+        </div>
+        <div>
+        <label>Ngày kết thúc</label>
+        <select id="dayEnd" th:field="*{endDate}" name="departureDay"></select>
+        <select id="monthEnd" th:field="*{endDate}" name="departureDay"></select>
+        <select id="yearEnd" th:field="*{endDate}" name="departureDay"></select>
+        </div>
+        <h4>Địa chỉ liên lạc</h4>
+        <div>
+        <label>Tỉnh thành</label>
+        <select th:field="*{city}">
+            <option>-- Chọn --</option>
+            <option name="city" value="haNoi">Hà Nội</option>
+            <option name="city" value="hue">Huế</option>
+            <option name="city" value="dn">Đà Nẵng</option>
+            <option name="city" value="hcm">Hồ Chí Minh</option>
+        </select>
+        </div>
+        <div>
+        <label>Quận / huyện</label>
+        <select th:field="*{district}">
+            <option>-- Chọn --</option>
+            <option name="city" value="haNoi">Hà Nội</option>
+            <option name="city" value="hue">Huế</option>
+            <option name="city" value="dn">Đà Nẵng</option>
+            <option name="city" value="hcm">Hồ Chí Minh</option>
+        </select>
+        </div>
+        <div>
+        <label>Phường / xã</label>
+        <select th:field="*{wards}">
+            <option>-- Chọn --</option>
+            <option name="city" value="haNoi">Hà Nội</option>
+            <option name="city" value="hue">Huế</option>
+            <option name="city" value="dn">Đà Nẵng</option>
+            <option name="city" value="hcm">Hồ Chí Minh</option>
+        </select>
+        </div>
+        <div>
+        <label>Điện thoại</label>
+        <input type="text" th:field="*{phone}">
+        </div>
+        <div>
+        <label>Email</label>
+        <input type="email" th:field="*{email}">
+        </div>
+        <input type="submit" value="gửi">
+    </form>
+</body>
+</html>
