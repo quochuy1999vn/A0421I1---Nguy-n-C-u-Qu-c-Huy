@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Detail</title>
+</head>
+<body>
+<fieldset>
+    <legend>View Detail</legend>
+    <table th:object="${blogs}">
+        <tr>
+            <th>Name Blog: </th>
+            <td th:text="*{name}"></td>
+        </tr>
+        <tr>
+            <th>Content: </th>
+            <td th:text="*{content}"></td>
+        </tr>
+    </table>
+</fieldset>
+
+</body>
+</html>
