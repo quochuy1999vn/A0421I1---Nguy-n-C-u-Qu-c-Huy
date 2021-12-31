@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Shop</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <script src="../static/js/bootstrap.bundle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" id="btnModalCreate">
-    Create
-</button>
-<h3 th:if="${#message}" th:text="${message}" style="color: red"></h3>
+<p>
+    <a href="/create">Create</a>
+</p>
+<h3 th:if="${message}" th:text="${message}" style="color: red"></h3>
 
 <h3>Danh Sách Sản Phẩm</h3>
 <table class="table" border="1">
-    <tr>
+    <tr >
         <th th:each="product : ${products}">
-            <div>
-                <a th:href="@{/view-product/{id}(id = ${product.getId()})}">
-                    <img width="230px" height="300px" th:src="@{/img/{img} (img = ${product.getImg()})}">
+            <div >
+                <a th:href="@{/view/{id}(id = ${product.id})}">
+                    <img style="display: block; margin-left: auto; margin-right: auto" width="230px" height="300px" th:src="@{/img/{img}(img = ${product.getImg()})}">
                 </a>
             </div>
         </th>
     </tr>
-    <tr th:each="product : ${products}">
-        <div style="text-align: center">
-            <p th:text="${product.name}"></p>
-            <span th:text="${product.price}"></span>VNĐ
+    <tr >
+        <td th:each="product : ${products}">
+            <div style="text-align: center">
+                <p th:text="${product.getName()}"></p>
+                <span th:text="${product.price}"></span>vnđ<br/>
 
-            <button type="button" class="btn btn-danger" id="btnModalDelete"
-                    th:onclick="'javascript:showDelete(' + ${product.id} + ')'">
-                Delete
-            </button>
-        </div>
+                <button type="button" class="btn btn-danger">
+                    <a th:href="@{/delete/{id}(id = ${product.id})}">Delete</a>
+                </button>
+
+            </div>
+        </td>
     </tr>
 </table>
+
 <!-- Modal -->
 <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <p>
+        <a th:href="@{/shop}">Back to Product List</a>
+    </p>
+    <table class="table table-striped table-info table-inverse table-responsive">
+        <thead class="thead-inverse">
+            <tr>
+                <th th:colspan="3">Giỏ hàng (Số lượng SP: <span th:text="${cartMoney}"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="carts : ${cart}">
+                <th><img width="80px" height="80px" th:src="@{/img/{img}(img = ${carts.getValue().product.img})}"></th>
+                <td>
+                    <span th:text="${carts.getValue().product.name}"></span></br>
+                    <span>Giá: </span></br>
+                    <span>Số lượng: </span>
+                </td>
+                <td>
+                    <span></span></br>
+                    <span th:text="${carts.getValue().product.price}"></span></br>
+                    <input style="width: 40px" type="number" th:value="${carts.getValue().quantity}">
+                </td>
+                <td></td>
+            </tr>
+            <tr th:colspan="3">
+                Tổng tiền: <span th:text="${cartMoney}"></span>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
