@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <script src="../static/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+<form class="form-horizontal" th:action='/create' method="POST" th:object="${products}">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Create Product</legend>
+    </div>
+    <div class="control-group">
+      <label class="control-label"  for="username">Name Product</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" th:field="*{name}">
+      </div>
+    </div>
+
+    <div class="control-group">
+
+      <label class="control-label" for="price">Price</label>
+      <div class="controls">
+        <input type="text" id="price" name="price" placeholder="" class="input-xlarge" th:field="*{price}">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+        <input type="password" id="description" name="description" placeholder="" class="input-xlarge" th:filed="*{description}">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success">Create</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</body>
+</html>
