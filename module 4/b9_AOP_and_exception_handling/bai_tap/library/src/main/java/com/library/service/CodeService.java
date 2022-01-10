@@ -6,9 +6,10 @@ import com.library.model.Status;
 import com.library.repository.IBookRepository;
 import com.library.repository.ICodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CodeService implements ICodeService{
 
     @Autowired
