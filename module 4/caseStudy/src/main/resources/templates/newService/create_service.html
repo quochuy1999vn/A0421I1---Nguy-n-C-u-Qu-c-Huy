@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <link rel="stylesheet" href="../static/indexCSS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <style>
+        .header .header1 {
+            height: 100px;
+            border-bottom: 2px solid black;
+        }
+        .header .header2 {
+            /*height: 40px;*/
+            /*clear: both;*/
+            padding: 5px;
+            border-bottom: 2px solid black;
+        }
+
+        .header .header2 a {
+            text-decoration: none;
+            color: black;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            padding: 0px 20px 0px 20px;
+        }
+
+        .body .col-lg-3 {
+            height: 450px;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        .body {
+            overflow:hidden;
+        }
+
+        .footer {
+            border-top: 2px solid black;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header1">
+        <div class="row">
+            <div class="col-lg-10"><h1>Logo</h1></div>
+            <div class="col-lg-2"><p>Nguyễn Cửu Quốc Huy</p></div>
+        </div>
+    </div>
+    <div class="header2">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <a href="/index">Home</a>
+                <a href="/employee">Employee</a>
+                <a href="/customer">Customer</a>
+                <a href="/service">Service</a>
+                <a href="/contract">Contract</a>
+            </div>
+            <div class="col-lg-3"><form method="get" style="align-items: center">
+                <input type="hidden" name="action" value="search">
+                <input name="name">
+                <button type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body">
+    <div class="row">
+        <div class="col-lg-3">
+            <p>Item One</p>
+            <p>Item Two</p>
+            <p>Item Three</p>
+        </div>
+        <div class="col-lg-9">
+            <th:block th:if="${message}">
+                <p style="color: red" th:text="${message}"></p>
+            </th:block>
+            <form th:action="@{/create_service}" th:object="${services}" method="post">
+                <table class="table table-bordered">
+                    <tr>
+                        <th scope="col">Service Id</th>
+                        <td scope="col"><input th:field="*{service_id}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_id')}" th:errors="*{service_id}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <td scope="col"><input th:field="*{service_name}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_name')}" th:errors="*{service_name}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Area</th>
+                        <td scope="col"><input th:field="*{service_area}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_area')}" th:errors="*{service_area}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Cost</th>
+                        <td scope="col"><input th:field="*{service_cost}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_cost')}" th:errors="*{service_cost}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Max People</th>
+                        <td scope="col"><input th:field="*{service_max_people}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_max_people')}" th:errors="*{service_max_people}">Error</td>
+                    </tr>
+                    <tr>
+                        <th>Service Type</th>
+                        <td><select th:field="*{service_type_id}">
+                            <option value="">Select Service Type</option>
+                            <option th:each="serviceType : ${serviceTypes}"
+                                    th:value="${serviceType.service_type_id}" th:text="${serviceType.service_type_name}"></option>
+                        </select></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('service_type_id')}" th:errors="*{service_type_id}">Error</td>
+                    </tr>
+                    <tr>
+                        <th>Rent Type</th>
+                        <td><select th:field="*{rent_type_id}">
+                            <option value="">Select Rent Type</option>
+                            <option th:each="rentType : ${rentTypes}"
+                                    th:value="${rentType.rent_type_id}" th:text="${rentType.rent_type_name}"></option>
+                        </select></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('rent_type_id')}" th:errors="*{rent_type_id}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Standard Room</th>
+                        <td scope="col"><input th:field="*{standard_room}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('standard_room')}" th:errors="*{standard_room}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Description other convenience</th>
+                        <td scope="col"><input th:field="*{description_other_convenience}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('description_other_convenience')}" th:errors="*{description_other_convenience}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Fool Area</th>
+                        <td scope="col"><input th:field="*{pool_area}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('pool_area')}" th:errors="*{pool_area}">Error</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Number floor</th>
+                        <td scope="col"><input th:field="*{number_of_floors}"></td>
+                        <td style="color: red" th:if="${#fields.hasErrors('number_of_floors')}" th:errors="*{number_of_floors}">Error</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input class="btn btn-primary" type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="footer">Footer...</div>
+</body>
+</html>

@@ -5,20 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137bed9c-0111-4612-8c72-23699b3ec3c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b11_webService_restful/thuc_hanh/customer_manager_use_RESTful/src/main/java/cms/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module 3/caseStudyWBE_JSP_Servlet/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module 3/caseStudyWBE_JSP_Servlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module 3/caseStudyWBE_JSP_Servlet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/thuc_hanh/phone_manager/src/main/resources/templates/phones/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../b12_jQuery_and_ajax/thuc_hanh/phone_manager/src/main/resources/templates/phones/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../b1_MVC_overview/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../b1_MVC_overview/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b2_spring_controller/bai_tap/display_sandwich_condiments/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../b2_spring_controller/bai_tap/display_sandwich_condiments/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../b2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../b2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../b5_CSDL_ORM/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../b5_CSDL_ORM/thuc_hanh/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/registration_form/RegistrationFormApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/registration_form/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/registration_form/RegistrationFormApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b9_AOP_and_exception_handling/thuc_hanh/customer-managementt" beforeDir="false" afterPath="$PROJECT_DIR$/../../b9_AOP_and_exception_handling/thuc_hanh/customer-managementt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -98,6 +108,7 @@
       <workItem from="1639816316910" duration="200000" />
       <workItem from="1639816573023" duration="1078000" />
       <workItem from="1640749199917" duration="2365000" />
+      <workItem from="1642596802728" duration="705000" />
     </task>
     <servers />
   </component>
