@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+<th:block th:if="${message}">
+    <p style="color: red" th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create}" th:object="${promotions}" method="post">
+    <table>
+        <tr>
+            <th>Tiêu Đề<span style="color: red">*</span></th>
+            <td><input th:field="*{title}" placeholder="Tiêu đề"></td>
+            <td style="color: red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Error</td>
+
+        </tr>
+        <tr>
+            <th>Thời gian bắt đầu<span style="color: red">*</span></th>
+            <td><input placeholder="YY-MM-DD" th:field="*{startDate}"></td>
+            <td style="color: red" th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}">Error</td>
+        </tr>
+        <tr>
+            <th>Thời gian kết thúc<span style="color: red">*</span></th>
+            <td><input placeholder="YY-MM-DD" th:field="*{endDate}"></td>
+            <td style="color: red" th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}">Error</td>
+        </tr>
+        <tr>
+            <th>Mức giá giảm<span style="color: red">*</span></th>
+            <td><input th:field="*{discountRate}" placeholder="0"></td>
+            <td style="color: red" th:if="${#fields.hasErrors('discountRate')}" th:errors="*{discountRate}">Error</td>
+        </tr>
+        <tr>
+            <th>Chi tiết<span style="color: red">*</span></th>
+            <td><input th:field="*{detail}"></td>
+            <td style="color: red" th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}">Error</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

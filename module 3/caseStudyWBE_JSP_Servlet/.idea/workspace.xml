@@ -2,54 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dacda815-cbd4-49ab-bf06-775784bb5adf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../thi/src/main/java/model/bean/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CaseStudyModule3/Audit_Module 3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudyModule3/Audit_Module 3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../b8_bootstrap/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../b8_bootstrap/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/classes/java/main/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/classes/java/main/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/classes/java/main/servlet/ServletCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/classes/java/main/servlet/ServletCustomer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/libs/display_client_list-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/libs/display_client_list-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/java/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/java/servlet/ServletCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/java/servlet/ServletCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/webapp/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../bai10_JSP_and_JSTL/bai_tap/display_client_list/src/main/webapp/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/build/libs/product_manage-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/build/libs/product_manage-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai11_MVC_model/bai_tap/product_manage/src/main/java/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build/classes/java/main/dao/IUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build/classes/java/main/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build/classes/java/main/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/dao/IUserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/webapp/user/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/webapp/user/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bai12_JDBC_and_CRUD/thuc_hanh/user_management_using_JSP_Servlet_JDBC_MySQL/src/main/webapp/user/list.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/bai_tap/integrate_RESTful_for_bolg/src/main/java/com/integrate_restful_for_bolg/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b11_webService_restful/thuc_hanh/customer_manager_use_RESTful/src/main/java/cms/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module 4/b12_jQuery_and_ajax/bai_tap/blog_manager_ajax/src/main/java/com/blog_manager_ajax/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 4/b1_MVC_overview/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 4/b1_MVC_overview/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 4/b2_spring_controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 4/b2_spring_controller/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 4/b5_CSDL_ORM/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 4/b5_CSDL_ORM/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module 4/b9_AOP_and_exception_handling/thuc_hanh/customer-managementt" beforeDir="false" afterPath="$PROJECT_DIR$/../../module 4/b9_AOP_and_exception_handling/thuc_hanh/customer-managementt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21ORVaEJn3hhIg5VV4h7RdjiYzo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -69,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/caseStudy_WBE_JSP_Servlet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,6 +56,9 @@
       <option name="presentableId" value="Default" />
       <updated>1637810172075</updated>
       <workItem from="1637810174122" duration="43000" />
+      <workItem from="1641985223567" duration="1520000" />
+      <workItem from="1642145028275" duration="1521000" />
+      <workItem from="1642157967614" duration="594000" />
     </task>
     <servers />
   </component>

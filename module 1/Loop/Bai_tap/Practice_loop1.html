@@ -48,17 +48,18 @@
      // }
 
      // bài 5
-     // var f1 = 1, f2 =1;
-     // var sum = 0;
-     // document.write(f1 + '</br>');
-     // for (i = 2; i <= 10; i++) {
-     //   document.write(f2 + '</br>');
-     //   let temp = f1 + f2;
-     //   sum += temp;
-     //   f1 = f2;
-     //   f2 = temp;
-     // }
-     // document.write('Tổng các sô trong dãy Fibonacci trên là: '+sum);
+     var f1 = 1, f2 =1;
+     var sum = 0;
+     document.write(f1 + '</br>');
+     for (let i = 2; i <= 10; i++) {
+       document.write(f2 + '</br>');
+       document.write(f1 + "+" + f2+ '</br>');
+       let temp = f1 + f2;
+       sum += temp;
+       f1 = f2;
+       f2 = temp;
+     }
+     document.write('Tổng các sô trong dãy Fibonacci trên là: '+sum);
 
      // bài 6
      // var sum = 0;

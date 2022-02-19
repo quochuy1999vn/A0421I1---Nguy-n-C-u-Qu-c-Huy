@@ -110,7 +110,7 @@
                         <th scope="col">Customer</th>
                         <td><select th:field="*{customer_id}">
                             <option th:each="customer : ${customers}"
-                                    th:value="${customer.customer_id}" th:text="${customer.customer_name}"></option>
+                                    th:value="${customer.customer_id}" th:text="${customer.customerName}"></option>
                         </select></td>
                     </tr>
                     <tr>

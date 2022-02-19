@@ -17,7 +17,8 @@ public class Customer {
     private Customer_type customer_type_id;
 
     @NotBlank
-    private String customer_name;
+    @Column(name = "customer_name")
+    private String customerName;
 
     @NotBlank
     private String customer_birthday;
@@ -40,7 +41,7 @@ public class Customer {
 
     public Customer(String customer_id, String customer_name, String customer_birthday, boolean customer_gender, String customer_id_card, String customer_phone, String customer_email, String customer_address) {
         this.customer_id = customer_id;
-        this.customer_name = customer_name;
+        this.customerName = customer_name;
         this.customer_birthday = customer_birthday;
         this.customer_gender = customer_gender;
         this.customer_id_card = customer_id_card;
@@ -65,12 +66,12 @@ public class Customer {
         this.customer_type_id = customer_type_id;
     }
 
-    public String getCustomer_name() {
-        return customer_name;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setCustomer_name(String customer_name) {
-        this.customer_name = customer_name;
+    public void setCustomerName(String customer_name) {
+        this.customerName = customer_name;
     }
 
     public String getCustomer_birthday() {
