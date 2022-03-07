@@ -1,0 +1,38 @@
+<h2>
+Register Form
+</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label>Email</label>
+  <input type="text" formControlName="email">
+  <span *ngIf="registerForm.controls.email.dirty
+      && registerForm.controls.email?.invalid" style="color: red">Require Input</span>
+  <label>Password</label>
+  <input type="text" formControlName="password">
+  <small *ngIf="registerForm.get('pwGroup.password').touched && registerForm.get('pwGroup.password').errors?.required"
+         class="text-warning fst-italic">Please fill out this field!</small>
+  <small *ngIf="registerForm.get('pwGroup.password').dirty && registerForm.get('pwGroup.password').errors?.minlength"
+         class="text-warning fst-italic">Please enter a valid password.
+    Acceptable passwords are at least 6 characters long</small>
+  <label>Confirm Password</label>
+  <input type="text" formControlName="confirmPassword">
+  <small *ngIf="registerForm.get('pwGroup.cPassword').touched && registerForm.get('pwGroup').errors?.passwordNotMatch"
+         class="text-warning fst-italic">Confirm password must be equal to password!</small>
+  <label>Country</label>
+  <input type="text" formControlName="country">
+  <span *ngIf="registerForm.controls.email.dirty
+      && registerForm.controls.country?.invalid" style="color: red">Require Input</span>
+  <label>Age</label>
+  <input type="text" formControlName="age">
+  <span *ngIf="registerForm.controls.email.dirty
+      && registerForm.controls.age?.invalid" style="color: red">Require Input</span>
+  <label>Gender</label>
+  <input type="radio" formControlName="gender">
+  <span *ngIf="registerForm.controls.email.dirty
+  && registerForm.controls.gender?.invalid" style="color: red">Require Input</span>
+
+  <label>Phone</label>
+  <input type="text" formControlName="phone">
+  <span *ngIf="registerForm.controls.email.dirty
+      && registerForm.controls.phone?.invalid" style="color: red">Require Input</span>
+  <button type="submit">Register</button>
+</form>
