@@ -3,7 +3,16 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module 1/Git&amp;HTML/GitProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b13_i18n/thuc_hanh/spring-internationalize" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b14_web_application_security_in_spring/thuc_hanh/spring-security" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module 4/b1_MVC_overview/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b2_spring_controller/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b4_form_data_binding/thuc_hanh/spring-upload-file" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b4_form_data_binding/thuc_hanh/spring-user-model" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b5_CSDL_ORM/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b8_validation/thuc_hanh/spring-custom-phone-validate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b8_validation/thuc_hanh/spring-validate-infor-user" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module 4/b9_AOP_and_exception_handling/thuc_hanh/customer-managementt" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module1/Git&amp;HTML/GitProject" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceColorable/apj-shape" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module2/src/abstractClass_interface/bai_tap/interfaceResizeable/apj-shape" vcs="Git" />
