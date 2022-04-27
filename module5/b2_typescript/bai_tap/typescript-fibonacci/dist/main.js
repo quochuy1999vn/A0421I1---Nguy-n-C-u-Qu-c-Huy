@@ -5,9 +5,9 @@ console.log(f1);
 for (let i = 2; i <= 10; i++) {
     console.log(f2);
     let temp = f1 + f2;
-    sum += temp;
+    sum += f2;
     f1 = f2;
     f2 = temp;
 }
-console.log('Tổng các sô trong dãy Fibonacci trên là: ' + sum2);
+console.log('Tổng các sô trong dãy Fibonacci trên là: ' + sum);
 //# sourceMappingURL=main.js.map
