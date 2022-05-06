@@ -1,0 +1,26 @@
+<h2 style="text-align: center">Today's article</h2>
+<hr>
+<app-navbar></app-navbar>
+<hr>
+<div class="form-control">
+  <h2>Article Information</h2>
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.img" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="float: right" (click)="addNewArticle()">Add</button></td>
+    </tr>
+  </table>
+</div>
+<hr>
+<app-footer></app-footer>
+
