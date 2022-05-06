@@ -1,1 +1,20 @@
-<p>calculator works!</p>
+<div class="calculator-app form-control">
+  <h1>Calculator App</h1>
+  <div class="calculator-input">
+    <span class="col-md-2">Number 1: </span>
+    <input class="col-md-2" type="number" name="num1" [(ngModel)]="number1">
+  </div>
+  <div class="calculator-input">
+    <span class="col-md-2">Number 2: </span>
+    <input class="col-md-2" type="number" name="num2" [(ngModel)]="number2">
+  </div>
+  <div class="calculator-button">
+    <button class="butt" (click)="sum()">+</button>
+    <button class="butt" (click)="minus()">-</button>
+    <button class="butt" (click)="mult()">*</button>
+    <button class="butt" (click)="div()">/</button>
+  </div>
+  <div class="result">
+    <h3>Result: {{result}}</h3>
+  </div>
+</div>

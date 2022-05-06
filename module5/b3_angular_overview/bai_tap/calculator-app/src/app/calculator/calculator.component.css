@@ -1,0 +1,18 @@
+.calculator-app {
+  text-align: center;
+}
+
+.calculator-input {
+  margin: 10px 0;
+  padding-right:110px;
+}
+
+.result {
+  padding-right: 345px;
+}
+
+.butt {
+  margin: 0 10px;
+  padding: 6px 12px;
+  background: cornflowerblue;
+}
