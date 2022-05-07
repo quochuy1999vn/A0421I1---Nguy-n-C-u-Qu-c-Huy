@@ -1,0 +1,73 @@
+<h1>Registration Form</h1>
+<form class="form-control" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <!-- Email -->
+  <div class="mb-4">
+    <label class="col-md-1" for="email">Email</label>
+    <input type="text" id="email" name="email" formControlName="email">
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="!registerForm.get('email')?.valid && registerForm.get('email')?.touched">
+    Vui lòng nhập Email
+  </div>
+
+  <!-- Password -->
+  <fieldset formGroupName="pws">
+    <div class="mb-4">
+      <label class="col-md-1" for="password">Password</label>
+      <input type="text" id="password" name="password" formControlName="password">
+    </div>
+    <div class="col alert alert-danger" role="alert"
+         *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched">
+      Vui lòng nhập Pass
+    </div>
+
+    <div class="mb-4">
+      <label class="col-md-1" for="confirmPass">Confirm Password</label>
+      <input type="text" id="confirmPass" name="confirmPass" formControlName="confirmPass">
+    </div>
+  </fieldset>
+
+  <!-- Country -->
+  <div class="mb-4">
+    <label class="col-md-1" for="country">Country</label>
+    <select class="form-select" id="country" [(ngModel)]="selected">
+      <option disabled>Choose Country</option>
+      <option *ngFor="let n of countrys">{{ n }}</option>
+    </select>
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="!registerForm.get('country')?.valid && registerForm.get('country')?.touched">
+    Vui lòng nhập country
+  </div>
+
+  <!-- Age -->
+  <div class="mb-4">
+    <label class="col-md-1" for="age">Age</label>
+    <input type="text" id="age" name="age" formControlName="age">
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="!registerForm.get('age')?.valid && registerForm.get('age')?.touched">
+    Vui lòng nhập age
+  </div>
+
+  <!-- Gender -->
+  <div class="mb-4">
+    <label class="col-md-1" for="gender">Gender </label>
+    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+    <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+  </div>
+
+  <!-- Phone -->
+  <div class="mb-4">
+    <label class="col-md-1" for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" formControlName="phone">
+  </div>
+  <div class="mb-4">
+    <button type="submit">Submit</button>
+  </div>
+  <div class="col alert alert-danger" role="alert"
+       *ngIf="!registerForm.get('phone')?.valid && registerForm.get('phone')?.touched">
+    Vui lòng nhập phone
+  </div>
+</form>
