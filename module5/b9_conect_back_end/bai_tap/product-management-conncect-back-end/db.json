@@ -1,0 +1,36 @@
+{
+  "product": [
+    {
+      "name": "Iphone 15 ProMax",
+      "price": "3000",
+      "description": "New",
+      "category": {
+        "name": "Smart Phone",
+        "id": 1
+      },
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "name": "Smart Phone",
+      "id": 1
+    },
+    {
+      "name": "TV",
+      "id": 2
+    },
+    {
+      "name": "Tủ lạnh",
+      "id": 3
+    },
+    {
+      "name": "Máy lạnh",
+      "id": 4
+    },
+    {
+      "name": "Quạt",
+      "id": 5
+    }
+  ]
+}

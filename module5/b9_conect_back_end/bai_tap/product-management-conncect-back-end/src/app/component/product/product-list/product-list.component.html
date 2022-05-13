@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<h1>Danh sách sản phẩm</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Tên sản phẩm</th>
+    <th>Giá</th>
+    <th>Mô tả</th>
+    <th>Danh mục</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let product of products">
+  <tr >
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.category.name}}</td>
+    <td>
+      <a [routerLink]="['/product/edit', product.id]"><i class="fa fa-pencil-square-o"></i></a>
+
+      <!-- Button trigger modal -->
+      <a href="#" data-toggle="modal" [attr.data-target]="'#myModal'+ product.id">
+        <i class="fa fa-trash"></i>
+      </a>
+      <!-- Modal -->
+      <div class="modal fade" [id]="'myModal' +product.id" tabindex="-1" role="dialog"
+           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>Bạn Có Muốn Xoá Thông Tin Sản Phẩm Có ID: {{product.id}} </span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                <a class="text-black-50" [routerLink]="['/product/delete' + product.id]">
+                  Có
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </ng-container>
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+<h1>Dictionary Page</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Word</th>
+    <th>Mean</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dictionarys of dictionary">
+    <td>{{dictionarys.word}}</td>
+    <td><a class="btn btn-info" [routerLink]="['detail', dictionarys.id]">Detail</a></td>
+  </tr>
+  </tbody>
+</table>

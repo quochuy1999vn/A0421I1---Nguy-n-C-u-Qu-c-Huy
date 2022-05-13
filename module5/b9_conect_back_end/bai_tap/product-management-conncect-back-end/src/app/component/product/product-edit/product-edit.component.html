@@ -1,0 +1,27 @@
+<h1>Cập nhật thông tin sản phẩm</h1>
+<form class="form-group" [formGroup]="productForm" (ngSubmit)="updateProduct(id)">
+  <div class="form-product-list">
+    <div class="form-control">
+      <label class="m-2 col-1">Name</label>
+      <input class="m-2" type="text" formControlName="name">
+    </div>
+    <div class="form-control">
+      <label class="m-2 col-1">Price</label>
+      <input class="m-2" type="text" formControlName="price">
+    </div>
+    <div class="form-control">
+      <label class="m-2 col-1">Description</label>
+      <input class="m-2" type="text" formControlName="description">
+    </div>
+    <div class="form-control">
+      <label class="m-2 col-1">Category</label>
+      <select class="m-2" formControlName="category">
+        <option disabled>Chọn danh mục sản phẩm</option>
+        <option *ngFor="let category of categories" [ngValue]="category" >{{category.name}}</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <button type="submit">Cập nhật</button>
+    </div>
+  </div>
+</form>
