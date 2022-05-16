@@ -1,0 +1,67 @@
+<style>
+  a {
+    margin-right: 10px;
+  }
+</style>
+<h1>Danh Sách Nhân Viên</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Họ và tên</th>
+    <th>Ngày Sinh</th>
+    <th>CMND</th>
+    <th>SDT</th>
+    <th>Email</th>
+    <th>Trình Độ</th>
+    <th>Vị Trí</th>
+    <th>Lương</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let nhanViens of nhanVien; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{nhanViens.ho_ten}}</td>
+    <td>{{nhanViens.ngay_sinh}}</td>
+    <td>{{nhanViens.cmnd}}</td>
+    <td>{{nhanViens.sdt}}</td>
+    <td>{{nhanViens.email}}</td>
+    <td>{{nhanViens.trinh_do}}</td>
+    <td>{{nhanViens.vi_tri}}</td>
+    <td>{{nhanViens.luong}}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/nhan-vien/nhan-vien-edit/', nhanViens.id]">Cập Nhật</a>
+      <!-- Button trigger modal -->
+      <a class="btn btn-danger" href="#" data-toggle="modal" [attr.data-target]="'#myModal'+ nhanViens.id">
+        Xoá
+      </a>
+      <!-- Modal -->
+      <div class="modal fade" [id]="'myModal' +nhanViens.id" tabindex="-1" role="dialog"
+           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>Bạn Có Muốn Xoá Thông Tin Nhân Viên Có ID: {{nhanViens.id}} </span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                <a class="text-black-50" [routerLink]="['/nhan-vien/nhan-vien-delete/'] + nhanViens.id">
+                  Có
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

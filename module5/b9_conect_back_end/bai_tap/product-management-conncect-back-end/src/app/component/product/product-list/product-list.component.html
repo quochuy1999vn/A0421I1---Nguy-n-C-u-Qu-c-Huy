@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" src="">
 <h1>Danh sách sản phẩm</h1>
 <table class="table table-striped">
   <thead>
@@ -43,8 +44,8 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
               <button type="button" class="btn btn-primary" data-dismiss="modal">
-                <a class="text-black-50" [routerLink]="['/product/delete' + product.id]">
-                  Có
+                <a class="text-black-50" [routerLink]="'/product/delete/' + product.id">
+                    Có
                 </a>
               </button>
             </div>

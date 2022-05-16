@@ -1,14 +1,24 @@
 {
   "product": [
     {
-      "name": "Iphone 15 ProMax",
-      "price": "3000",
-      "description": "New",
+      "name": "â",
+      "price": "â",
+      "description": "â",
       "category": {
         "name": "Smart Phone",
         "id": 1
       },
       "id": 1
+    },
+    {
+      "name": "a",
+      "price": "2",
+      "description": "ád",
+      "category": {
+        "name": "TV",
+        "id": 2
+      },
+      "id": 2
     }
   ],
   "category": [

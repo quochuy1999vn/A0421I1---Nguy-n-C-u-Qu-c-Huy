@@ -1,0 +1,70 @@
+<style>
+  a {
+    color: white;
+    margin-right: 10px;
+  }
+</style>
+<h1>Danh Sách Khách Hàng</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Họ và tên</th>
+    <th>Ngày Sinh</th>
+    <th>Giơi Tính</th>
+    <th>CMND</th>
+    <th>SDT</th>
+    <th>Email</th>
+    <th>Loại Khách</th>
+    <th>Dịa Chỉ</th>
+    <th>Dịch Vụ</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let khachHangs of khachHang; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{khachHangs.ho_ten}}</td>
+    <td>{{khachHangs.ngay_sinh}}</td>
+    <td>{{khachHangs.gioi_tinh}}</td>
+    <td>{{khachHangs.cmnd}}</td>
+    <td>{{khachHangs.sdt}}</td>
+    <td>{{khachHangs.email}}</td>
+    <td>{{khachHangs.loai_khach}}</td>
+    <td>{{khachHangs.dia_chi}}</td>
+    <td>{{khachHangs.dich_vu}}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/khach-hang/khach-hang-edit/', khachHangs.id]">Cập Nhật</a>
+      <!-- Button trigger modal -->
+      <a class="btn btn-danger" href="#" data-toggle="modal" [attr.data-target]="'#myModal'+ khachHangs.id">
+        Xoá
+      </a>
+      <!-- Modal -->
+      <div class="modal fade" [id]="'myModal' + khachHangs.id" tabindex="-1" role="dialog"
+           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>Bạn Có Muốn Xoá Thông Tin Nhân Viên Có ID: {{khachHangs.id}} </span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                <a class="text-black-50" [routerLink]="['/khach-hang/khach-hang-delete/'] + khachHangs.id">
+                  Có
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

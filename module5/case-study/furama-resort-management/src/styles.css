@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+h1 {
+  text-align: center;
+  color: cornflowerblue;
+}
+.body {
+  position: relative;
+}
+.container {
+  padding: 0;
+  display: inline-block;
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+}
+
+.container #nav {
+  width: 1519px;
+}
+
+.body {
+  background: url("assets/img/trang-chu/background.jpg") no-repeat;
+}

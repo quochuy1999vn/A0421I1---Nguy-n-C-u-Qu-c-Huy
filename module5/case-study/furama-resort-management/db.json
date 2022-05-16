@@ -1,0 +1,51 @@
+{
+  "nhan-vien": [
+    {
+      "id": 2,
+      "ho_ten": "nguyen van b",
+      "ngay_sinh": "20-05-2001",
+      "cmnd": "123141",
+      "sdt": "14254135",
+      "email": "b@gmal.com",
+      "trinh_do": "Sau đại học",
+      "vi_tri": "Quản lý",
+      "luong": "5000"
+    }
+  ],
+  "khach-hang": [
+    {
+      "id": 1,
+      "ho_ten": "nguyen van a",
+      "ngay_sinh": "20-05-2001",
+      "gioi_tinh": "123141",
+      "cmnd": "123141",
+      "sdt": "14254135",
+      "email": "a@gmal.com",
+      "loai_khach": "Diamond",
+      "dia_chi": "Đà Nẵng",
+      "dich_vu": "5000"
+    },
+    {
+      "id": 2,
+      "ho_ten": "nguyen van a",
+      "ngay_sinh": "20-05-2001",
+      "gioi_tinh": "123141",
+      "cmnd": "123141",
+      "sdt": "14254135",
+      "email": "a@gmal.com",
+      "loai_khach": "Diamond",
+      "dia_chi": "Đà Nẵng",
+      "dich_vu": "5000"
+    }
+  ],
+  "hop-dong": [
+    {
+      "id": 1,
+      "so_hop_dong": "1122",
+      "ngay_bat_dau": "20-05-2000",
+      "ngay_ket_thuc": "20-06-2000",
+      "so_tien_coc_truoc": "1000",
+      "tong_so_tien_thanh_toan": "2000"
+    }
+  ]
+}
