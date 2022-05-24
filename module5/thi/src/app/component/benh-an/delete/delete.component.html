@@ -1,0 +1,78 @@
+<!--<h1>Xoá Khách Hàng</h1>-->
+<!--<div class="row align-items-center mt-3">-->
+<!--  <div class="col-2"></div>-->
+<!--  <div class="col-8 card border-warning">-->
+<!--    <form (ngSubmit)="delete(id)" [formGroup]="benhAnForm">-->
+<!--      <div class="form-group mt-2">-->
+<!--        <label for="exampleFormControlInput1">Mã Bệnh Án</label>-->
+<!--        <input formControlName="maBenhAn" type="text" class="form-control" id="exampleFormControlInput1" readonly>-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Mã Bệnh Nhân</label>-->
+<!--        <input formControlName="maBenhNhan" type="text" class="form-control" readonly>-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('ten_sinh_vien').hasError('pattern') && editForm.get('ten_sinh_vien').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('ten_sinh_vien').hasError('required') && editForm.get('ten_sinh_vien').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Tên Sinh Viên Không Được Để Trống, Không Chứa Số Và Ký Tự Đặc Biệt&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Tên Bệnh Nhân</label>-->
+<!--        <input formControlName="tenBenhNhan" type="text" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('email').hasError('pattern') && editForm.get('email').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('email').hasError('required') && editForm.get('email').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Email Không Được Để Trống Và Phải Theo Định Dạng: abc@def.com&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Ngày Nhập Viện</label>-->
+<!--        <input formControlName="ngayNhapVien" type="date" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('so_dien_thoai').hasError('pattern') && editForm.get('so_dien_thoai').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('so_dien_thoai').hasError('required') && editForm.get('so_dien_thoai').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Sô Điện Thoại Không Được Để Trống Và Phải Chứa 10 - 12 Số.&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Ngày Ra Viện</label>-->
+<!--        <input formControlName="ngayRaVien" type="date" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('so_dien_thoai').hasError('pattern') && editForm.get('so_dien_thoai').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('so_dien_thoai').hasError('required') && editForm.get('so_dien_thoai').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Sô Điện Thoại Không Được Để Trống Và Phải Chứa 10 - 12 Số.&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Lý Do Nhập Viện</label>-->
+<!--        <input formControlName="lyDoNhapVien" type="textarea" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('so_dien_thoai').hasError('pattern') && editForm.get('so_dien_thoai').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('so_dien_thoai').hasError('required') && editForm.get('so_dien_thoai').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Sô Điện Thoại Không Được Để Trống Và Phải Chứa 10 - 12 Số.&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Phương Pháp Điều Trị</label>-->
+<!--        <input formControlName="phuongPhapDieuTri" type="textarea" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('so_dien_thoai').hasError('pattern') && editForm.get('so_dien_thoai').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('so_dien_thoai').hasError('required') && editForm.get('so_dien_thoai').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Sô Điện Thoại Không Được Để Trống Và Phải Chứa 10 - 12 Số.&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="exampleFormControlInput1">Bác Sĩ Điều Trị</label>-->
+<!--        <input formControlName="baSiDieuTri" type="text" class="form-control">-->
+<!--        &lt;!&ndash;        <p class="error" *ngIf="(editForm.get('so_dien_thoai').hasError('pattern') && editForm.get('so_dien_thoai').dirty)&ndash;&gt;-->
+<!--        &lt;!&ndash;          || (editForm.get('so_dien_thoai').hasError('required') && editForm.get('so_dien_thoai').touched)">&ndash;&gt;-->
+<!--        &lt;!&ndash;          Sô Điện Thoại Không Được Để Trống Và Phải Chứa 10 - 12 Số.&ndash;&gt;-->
+<!--        &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div class="text-center m-3">-->
+<!--        <button class="btn btn-warning mr-5">-->
+<!--          <a id="huy" [routerLink]="''">Huỷ</a>-->
+<!--        </button>-->
+<!--        <button type="submit" class="btn btn-danger">-->
+<!--          <span class="ml-1">Xoá</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="col-2"></div>-->
+

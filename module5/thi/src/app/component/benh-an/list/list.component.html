@@ -1,0 +1,70 @@
+<style>
+  a {
+    color: white;
+    margin-right: 10px;
+  }
+</style>
+<h1>Danh Sách Khách Hàng</h1>
+<a class="btn btn-primary" [routerLink]="['create']">Thêm Mới</a>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Mã Bệnh Án</th>
+    <th>Mã Bệnh Nhân</th>
+    <th>Tên Bệnh Nhân</th>
+    <th>Ngày Nhập Viện</th>
+    <th>Ngày Ra Viện</th>
+    <th>Lý Do Nhập Viện</th>
+    <th>Phương Pháp Điều Trị</th>
+    <th>Bác Sĩ Điều Trị</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let benhan of benhAn; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{benhan.maBenhAn}}</td>
+    <td>{{benhan.benhNhan.maBenhNhan}}</td>
+    <td>{{benhan.benhNhan.tenBenhNhan}}</td>
+    <td>{{benhan.ngayNhapVien | date: 'dd/MM/yyyy'}}</td>
+    <td>{{benhan.ngayRaVien | date: 'dd/MM/yyyy'}}</td>
+    <td>{{benhan.lyDoNhapVien}}</td>
+    <td>{{benhan.phuongPhapDieuTri}}</td>
+    <td>{{benhan.baSiDieuTri}}</td>
+    <td>
+      <a class="btn btn-warning" [routerLink]="['/edit/', benhan.id]">Cập Nhật</a>
+<!--      <a class="btn btn-danger" [routerLink]="['/delete/', benhan.id]">Xoá</a>-->
+<!--       Button trigger modal -->
+      <a class="btn btn-danger" href="#" data-toggle="modal" [attr.data-target]="'#myModal'+ benhan.id">
+        Xoá
+      </a>
+<!--       Modal-->
+      <div class="modal fade" [id]="'myModal' + benhan.id" tabindex="-1" role="dialog"
+           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Xác Nhận</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>Bạn Có Muốn Xoá Thông Tin Bệnh Án {{benhan.maBenhAn}} hay Không?</span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                <a class="text-black-50" [routerLink]="['/delete/' + benhan.id]">
+                  Có
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,75 @@
+<h1>Thêm Mới Khách Hàng</h1>
+<div class="row align-items-center mt-3">
+  <div class="col-2"></div>
+  <div class="col-8 card border-warning">
+    <form (ngSubmit)="submit()" [formGroup]="benhAnForm">
+      <div class="form-group mt-2">
+        <label for="exampleFormControlInput1">Mã Bệnh Án</label>
+        <input formControlName="maBenhAn" type="text" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <p class="text-danger" *ngIf="(benhAnForm.get('maBenhAn').hasError('required') && benhAnForm.get('maBenhAn').touched)">
+        Mã Bệnh Án Không Được Để Trống
+      </p>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tên Bệnh Nhân</label>
+        <select formControlName="benhNhan" class="form-control">
+          <option *ngFor="let benhNhan of benhnhan" [ngValue]="benhNhan">{{benhNhan.tenBenhNhan}}</option>
+        </select>
+        <p class="text-danger" *ngIf="(benhAnForm.get('benhNhan').hasError('pattern') && benhAnForm.get('benhNhan').dirty)
+                  || (benhAnForm.get('benhNhan').hasError('required') && benhAnForm.get('benhNhan').touched)">
+          Tên Bệnh Án Không Được Để Trống, Không Chứa Số Và Ký Tự Đặc Biệt
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Nhập Viện</label>
+        <input formControlName="ngayNhapVien" type="date" class="form-control" datepicker="dd-MM-yyyy">
+                <p class="text-danger" *ngIf="(benhAnForm.get('ngayNhapVien').hasError('required') && benhAnForm.get('ngayNhapVien').touched)">
+                  Ngày Nhập Viện Không Được Để Trống.
+                </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Ra Viện</label>
+        <input formControlName="ngayRaVien" type="date" class="form-control">
+        <p class="text-danger" *ngIf="(benhAnForm.get('ngayRaVien').hasError('required') && benhAnForm.get('ngayRaVien').touched)">
+          Ngày Ra Viện Không Được Để Trống.
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Lý Do Nhập Viện</label>
+        <input formControlName="lyDoNhapVien" type="textarea" class="form-control">
+        <p class="text-danger" *ngIf="(benhAnForm.get('lyDoNhapVien').hasError('pattern') && benhAnForm.get('lyDoNhapVien').dirty)
+                  || (benhAnForm.get('lyDoNhapVien').hasError('required') && benhAnForm.get('lyDoNhapVien').touched)">
+          Không được để trống
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Phương Pháp Điều Trị</label>
+        <input formControlName="phuongPhapDieuTri" type="textarea" class="form-control">
+        <p class="text-danger" *ngIf="(benhAnForm.get('phuongPhapDieuTri').hasError('pattern') && benhAnForm.get('phuongPhapDieuTri').dirty)
+                  || (benhAnForm.get('phuongPhapDieuTri').hasError('required') && benhAnForm.get('phuongPhapDieuTri').touched)">
+          Không được để trống
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Bác Sĩ Điều Trị</label>
+        <input formControlName="baSiDieuTri" type="text" class="form-control">
+        <p class="text-danger" *ngIf="(benhAnForm.get('baSiDieuTri').hasError('pattern') && benhAnForm.get('baSiDieuTri').dirty)
+                  || (benhAnForm.get('baSiDieuTri').hasError('required') && benhAnForm.get('baSiDieuTri').touched)">
+          Không được để trống
+        </p>
+      </div>
+      <div class="text-center m-3">
+        <button class="btn btn-danger mr-5">
+          <a id="huy" [routerLink]="''">
+            <i class="fa fa-paper-plane"></i>
+            Huỷ</a>
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <span class="ml-1">Thêm Mới</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="col-2"></div>
+

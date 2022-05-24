@@ -1,0 +1,40 @@
+{
+  "benh-an": [
+    {
+      "maBenhAn": "BA-112",
+      "benhNhan": {
+        "id": 1,
+        "maBenhNhan": "BN-435",
+        "tenBenhNhan": "Nguyễn Văn A"
+      },
+      "ngayNhapVien": "2022-05-06",
+      "ngayRaVien": "2022-05-21",
+      "lyDoNhapVien": "Gan",
+      "phuongPhapDieuTri": "Mổ",
+      "baSiDieuTri": "Lê C",
+      "id": 2
+    }
+  ],
+  "benh-nhan": [
+    {
+      "id": 1,
+      "maBenhNhan": "BN-435",
+      "tenBenhNhan": "Nguyễn Văn A"
+    },
+    {
+      "id": 2,
+      "maBenhNhan": "BN-123",
+      "tenBenhNhan": "Nguyễn Văn C"
+    },
+    {
+      "id": 3,
+      "maBenhNhan": "BN-984",
+      "tenBenhNhan": "Tôn Nữ D"
+    },
+    {
+      "id": 4,
+      "maBenhNhan": "BN-153",
+      "tenBenhNhan": "Đoàn Thị E"
+    }
+  ]
+}
